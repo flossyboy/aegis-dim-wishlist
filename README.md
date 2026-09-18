@@ -16,16 +16,29 @@ It follows Aegis's PvE recommendations for:
 - Aegis letter tier in the DIM note
 - recommended masterwork in the DIM note
 
-The wishlist contains full and partial matches, ordered **4/4 → 3/4 → 2/4 → 1/4**. DIM therefore chooses the fullest Aegis match available on a weapon and places thumbs-up icons on the recommended perks that contributed to that match.
+The wishlist contains full and partial matches, ordered from the richest matching subset down to single-perk matches. That lets DIM place thumbs-up icons on **every Aegis-recommended perk actually present on a weapon**, including multiple recommended perks rolled in the same perk column.
 
 Examples:
 
 - `Aegis S — 4/4 — MW: Reload`
 - `Aegis S — 2/4 — MW: Reload`
 
+The `x/4` value is **slot coverage**, not the raw number of thumbs. A Tier 5 weapon can therefore show several thumbs across two perk columns while still reading `2/4` if its barrel and magazine are not Aegis recommendations.
+
 DIM does **not** support masterworks as a wishlist matching condition, so the MW is informational only.
 
-Because partial matches are intentionally included, `is:wishlist` can also return weapons that match only **1/4** of Aegis's recommended weapon slots. Use the `x/4` note to judge completeness.
+Because partial matches are intentionally included, `is:wishlist` can also return weapons that match only one Aegis-recommended perk. Use the perk thumbs plus the `x/4` note to judge the roll.
+
+## Alternate weapon versions
+
+Destiny sometimes gives the same weapon name multiple item hashes, such as normal / Holofoil / reprised / Monument variants. The current file also patches same-name alternate hashes found across the user's supplied DIM weapon exports.
+
+- **49 same-name weapons patched**
+- **53 alternate item hashes added**
+- Aegis's exact perk hashes are reused on the alternate versions
+- if a recommended perk does not exist on that alternate version, DIM cannot match it, so it will not receive a thumb
+
+This specifically fixes cases such as alternate versions of **Salvager's Salvo** and **Snipehunt Mk. 47**.
 
 ## Add it to DIM
 
@@ -41,6 +54,7 @@ Then open a weapon to see the recommended perk thumbs and its Aegis tier / match
 - no PvP additions
 - no outside perk recommendations
 - based on the current detailed weapon tabs in the supplied 09/17/2026 Aegis Endgame Analysis workbook
+- alternate-hash support is currently derived from the user's supplied DIM weapon exports
 
 ## Updating
 
