@@ -10,6 +10,7 @@ description:Highlights every Aegis-recommended PvE perk present on each weapon, 
 // Alternate hashes reuse only Aegis's exact perk hashes; recommendations absent from that version cannot match in DIM.
 // Chattering Bone correction: Pantheon recommendations mapped to 4157371152 + 830651379; Last Wish recommendations mapped to 501329015.
 // Pantheon family correction: all 6 S29 Pantheon weapons now map the same Aegis recommendations to both normal + Holofoil hashes; Zaouli's Bane King's Fall recommendations remain isolated to 431721920.
+// Tenet of Bravery Holofoil audit: all 6 current Solstice Holofoil counterparts are covered; Something New Holofoil 2877020298 was added from the 1705150753 Aegis block.
 
 // No Hesitation
 dimwishlist:item=1801007332&perks=202670084,3142289711,2980589453,2890807135,3640170453,243981275,4293542123#notes:Aegis S — 4/4 — MW: Range
@@ -167577,3 +167578,72 @@ dimwishlist:item=431721920&perks=3038247973#notes:Aegis S — 1/4 — MW: Reload
 dimwishlist:item=431721920&perks=4293542123#notes:Aegis S — 1/4 — MW: Reload
 dimwishlist:item=431721920&perks=657025441#notes:Aegis S — 1/4 — MW: Reload
 dimwishlist:item=431721920&perks=3640170453#notes:Aegis S — 1/4 — MW: Reload
+
+// ================================================================
+// Tenet of Bravery Holofoil correction — verified 09/22/2026
+// ================================================================
+
+// Something New — S29 Holofoil
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320,1955165503,3523296417,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320,1955165503,3523296417#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320,1955165503,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320,3523296417,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1955165503,3523296417,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320,1955165503,3523296417,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320,1955165503,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320,1955165503#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320,3523296417#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1955165503,3523296417#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1955165503,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,3523296417,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320,1955165503,3523296417#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320,1955165503,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320,3523296417,124408337#notes:Aegis C — 4/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1955165503,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320,1955165503,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320,1955165503,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1955165503,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320,1955165503,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1431678320#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,1955165503#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,3523296417#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320,1955165503#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320,3523296417#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1955165503,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1955165503,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320,1955165503#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320,124408337#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1955165503,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1955165503,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320,1955165503,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320,1955165503,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320,3523296417,124408337#notes:Aegis C — 3/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1955165503,3523296417,124408337#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1561002382#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1431678320#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,1955165503#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774,124408337#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1431678320#notes:Aegis C — 1/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,1955165503#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382,124408337#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320,1955165503#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320,3523296417#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320,124408337#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1955165503,3523296417#notes:Aegis C — 1/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1955165503,124408337#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=3523296417,124408337#notes:Aegis C — 2/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1840239774#notes:Aegis C — 1/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1561002382#notes:Aegis C — 1/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1431678320#notes:Aegis C — 1/4 — MW: Reload
+dimwishlist:item=2877020298&perks=1955165503#notes:Aegis C — 1/4 — MW: Reload
+dimwishlist:item=2877020298&perks=3523296417#notes:Aegis C — 1/4 — MW: Reload
+dimwishlist:item=2877020298&perks=124408337#notes:Aegis C — 1/4 — MW: Reload
