@@ -12,6 +12,7 @@ description:Highlights every Aegis-recommended PvE perk present on each weapon, 
 // Pantheon family correction: all 6 S29 Pantheon weapons now map the same Aegis recommendations to both normal + Holofoil hashes; Zaouli's Bane King's Fall recommendations remain isolated to 431721920.
 // Tenet of Bravery Holofoil audit: all 6 current Solstice Holofoil counterparts are covered; Something New Holofoil 2877020298 was added from the 1705150753 Aegis block.
 // Vault of Glass Timelost audit: all 6 current S26 Timelost weapon hashes now reuse their matching normal S26 Aegis recommendation sets.
+// Guardian Games Holofoil audit: Keraunios, The Beacon, and Triple Laureate now reuse their matching non-Holofoil Aegis recommendation sets.
 
 // No Hesitation
 dimwishlist:item=1801007332&perks=202670084,3142289711,2980589453,2890807135,3640170453,243981275,4293542123#notes:Aegis S — 4/4 — MW: Range
@@ -169707,3 +169708,427 @@ dimwishlist:item=3623686757&perks=3643424744#notes:Aegis S — 1/4 — MW: Handl
 dimwishlist:item=3623686757&perks=3764420437#notes:Aegis S — 1/4 — MW: Handling / Reload
 dimwishlist:item=3623686757&perks=1089671869#notes:Aegis S — 1/4 — MW: Handling / Reload
 dimwishlist:item=3623686757&perks=1439600632#notes:Aegis S — 1/4 — MW: Handling / Reload
+
+// ================================================================
+// Guardian Games Holofoil counterpart patch — 10/12/2026
+// Holofoil versions reuse the matching current normal weapon's Aegis recommendations.
+// ================================================================
+
+// Keraunios — Holofoil
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876,2396489472,3966416502#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876,2396489472,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876,3966416502,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,2396489472,3966416502,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876,2396489472#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876,3966416502#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,2396489472,3966416502#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,2396489472,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,3966416502,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876,2396489472,3966416502#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876,2396489472,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876,3966416502,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,2396489472,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876,2396489472,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876,2396489472,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,2396489472,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876,2396489472,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876,2396489472,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,2396489472,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,1354429876#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,2396489472#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,3966416502#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876,2396489472#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876,3966416502#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876,4198902903#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,2396489472,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,2396489472,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876,2396489472#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,2396489472,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,2396489472,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876,2396489472,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876,2396489472,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2396489472,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876,2396489472#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,2396489472,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,2396489472,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876,2396489472,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876,2396489472,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876,3966416502,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,2396489472,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876,2396489472,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876,2396489472,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,2396489472,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876,2396489472,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3700496672#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,1354429876#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,2396489472#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,1354429876#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,2396489472#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876,2396489472#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2396489472,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2396489472,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,1354429876#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,2396489472#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876,2396489472#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876,3966416502#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876,4198902903#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,2396489472,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,2396489472,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876,2396489472#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,2396489472,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,2396489472,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876,2396489472,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876,2396489472,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876,3966416502,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2396489472,3966416502,4198902903#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2749775325#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3700496672#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,1354429876#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,2396489472#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3700496672#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,1354429876#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,2396489472#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,1354429876#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,2396489472#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876,2396489472#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876,3966416502#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876,4198902903#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=981450701&perks=2396489472,3966416502#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=2396489472,4198902903#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=3966416502,4198902903#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=1840239774#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=2749775325#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=3700496672#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=1354429876#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=2396489472#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=3966416502#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=981450701&perks=4198902903#notes:Aegis A — 1/4 — MW: Reload
+
+// The Beacon — Holofoil
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3643424744#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3987942396,2594592626,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3418782618#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3643424744#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3643424744#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3643424744#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3987942396,2594592626#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3987942396,3078487919#notes:Aegis B — 4/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3987942396,2594592626,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744,3987942396,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744,3987942396,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3987942396,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744,3987942396,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,689005463#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3418782618#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3418782618#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3643424744#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3418782618#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3643424744#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3987942396#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3987942396,2594592626#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3987942396,3078487919#notes:Aegis B — 3/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744,3987942396#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3987942396,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3987942396,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744,3987942396,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744,3987942396,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3987942396,2594592626,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,839105230#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,689005463#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3418782618#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,689005463#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3418782618#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3418782618#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3643424744#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3987942396#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3643424744#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3987942396#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744,3987942396#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3987942396,2594592626#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3987942396,3078487919#notes:Aegis B — 2/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=2594592626,3078487919#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=1840239774#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=839105230#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=689005463#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3418782618#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3643424744#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3987942396#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=2594592626#notes:Aegis B — 1/4 — MW: Charge Time
+dimwishlist:item=76739872&perks=3078487919#notes:Aegis B — 1/4 — MW: Charge Time
+
+// Triple Laureate — Holofoil
+dimwishlist:item=2908653246&perks=1300023272,1431678320,2922950962,3640170453,2360754333#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,1431678320,2922950962,3640170453#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,1431678320,2922950962,2360754333#notes:Aegis A — 4/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,1431678320,3640170453,2360754333#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,2922950962,3640170453,2360754333#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320,2922950962,3640170453,2360754333#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,1431678320,2922950962#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,1431678320,3640170453#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,1431678320,2360754333#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,2922950962,3640170453#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,2922950962,2360754333#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,3640170453,2360754333#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320,2922950962,3640170453#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320,2922950962,2360754333#notes:Aegis A — 3/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320,3640170453,2360754333#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=2922950962,3640170453,2360754333#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,1431678320#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,2922950962#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,3640170453#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272,2360754333#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320,2922950962#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320,3640170453#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320,2360754333#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=2922950962,3640170453#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=2922950962,2360754333#notes:Aegis A — 2/4 — MW: Reload
+dimwishlist:item=2908653246&perks=3640170453,2360754333#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1300023272#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=2908653246&perks=1431678320#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=2908653246&perks=2922950962#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=2908653246&perks=3640170453#notes:Aegis A — 1/4 — MW: Reload
+dimwishlist:item=2908653246&perks=2360754333#notes:Aegis A — 1/4 — MW: Reload
