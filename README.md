@@ -1,6 +1,6 @@
 # Aegis Endgame PvE DIM Wishlist
 
-A custom [Destiny Item Manager](https://destinyitemmanager.com/) wishlist generated from Aegis's Endgame Analysis spreadsheet dated **September 17, 2026**.
+A custom [Destiny Item Manager](https://destinyitemmanager.com/) wishlist generated from Aegis's Endgame Analysis spreadsheet dated **October 14, 2026**.
 
 ## What it does
 
