@@ -53,7 +53,7 @@ Then open a weapon to see the recommended perk thumbs and its Aegis tier / match
 - PvE only
 - no PvP additions
 - no outside perk recommendations
-- based on the current detailed weapon tabs in the supplied 09/17/2026 Aegis Endgame Analysis workbook
+- based on the current detailed weapon tabs in the supplied 10/14/2026 Aegis Endgame Analysis workbook
 - alternate-hash support is currently derived from the user's supplied DIM weapon exports
 
 ## Updating
