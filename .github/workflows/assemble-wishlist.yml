@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   assemble:
-    if: github.event.issue.title == 'ASSEMBLE MANIFEST VALIDATED WISHLIST'
+    if: github.event.issue.title == 'ASSEMBLE MANIFEST VALIDATED WISHLIST V2'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +19,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .upload_chunks/chunk_*.txt > aegis_endgame_pve_dim_wishlist.txt
+          : > aegis_endgame_pve_dim_wishlist.txt
+          for f in .upload_chunks/chunk_*.txt; do
+            cat "$f" >> aegis_endgame_pve_dim_wishlist.txt
+            printf '\n' >> aegis_endgame_pve_dim_wishlist.txt
+          done
           test "$(wc -l < aegis_endgame_pve_dim_wishlist.txt)" -eq 197304
           test "$(wc -c < aegis_endgame_pve_dim_wishlist.txt)" -eq 15882628
           grep -q '^title:Aegis Endgame PvE — Manifest-Validated Exact-Hash Wishlist 11/24/2026$' aegis_endgame_pve_dim_wishlist.txt
