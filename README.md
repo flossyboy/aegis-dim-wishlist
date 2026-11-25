@@ -1,44 +1,10 @@
 # Aegis Endgame PvE DIM Wishlist
 
-A custom [Destiny Item Manager](https://destinyitemmanager.com/) wishlist generated from Aegis's Endgame Analysis spreadsheet dated **October 14, 2026**.
+A custom [Destiny Item Manager](https://destinyitemmanager.com/) PvE wishlist built from Aegis's Endgame Analysis recommendations and validated against the live Bungie weapon manifest.
 
-## What it does
-
-This version is designed as a **perk guide**, not only a strict god-roll detector.
-
-It follows Aegis's PvE recommendations for:
-
-- recommended barrel
-- recommended magazine / battery
-- recommended perk 1
-- recommended perk 2
-- every listed alternative / valid permutation
-- Aegis letter tier in the DIM note
-- recommended masterwork in the DIM note
-
-The wishlist contains full and partial matches, ordered from the richest matching subset down to single-perk matches. That lets DIM place thumbs-up icons on **every Aegis-recommended perk actually present on a weapon**, including multiple recommended perks rolled in the same perk column.
-
-Examples:
-
-- `Aegis S — 4/4 — MW: Reload`
-- `Aegis S — 2/4 — MW: Reload`
-
-The `x/4` value is **slot coverage**, not the raw number of thumbs. A Tier 5 weapon can therefore show several thumbs across two perk columns while still reading `2/4` if its barrel and magazine are not Aegis recommendations.
-
-DIM does **not** support masterworks as a wishlist matching condition, so the MW is informational only.
-
-Because partial matches are intentionally included, `is:wishlist` can also return weapons that match only one Aegis-recommended perk. Use the perk thumbs plus the `x/4` note to judge the roll.
-
-## Alternate weapon versions
-
-Destiny sometimes gives the same weapon name multiple item hashes, such as normal / Holofoil / reprised / Monument variants. The current file also patches same-name alternate hashes found across the user's supplied DIM weapon exports.
-
-- **49 same-name weapons patched**
-- **53 alternate item hashes added**
-- Aegis's exact perk hashes are reused on the alternate versions
-- if a recommended perk does not exist on that alternate version, DIM cannot match it, so it will not receive a thumb
-
-This specifically fixes cases such as alternate versions of **Salvager's Salvo** and **Snipehunt Mk. 47**.
+**Current build:** November 24, 2026  
+**Wishlist entries:** 197,071  
+**Validation:** exact item-hash / exact socket-pool validation
 
 ## Add it to DIM
 
@@ -46,16 +12,77 @@ Use this raw wishlist URL in **DIM → Settings → Wish Lists → Add another w
 
 `https://raw.githubusercontent.com/flossyboy/aegis-dim-wishlist/main/aegis_endgame_pve_dim_wishlist.txt`
 
-Then open a weapon to see the recommended perk thumbs and its Aegis tier / match count / MW note.
+The filename stays unchanged between updates, so the DIM subscription URL does not need to be replaced when this repository is refreshed.
+
+## What the wishlist does
+
+This is designed as a **perk guide**, not only a strict god-roll detector.
+
+For each supported weapon, the wishlist can mark:
+
+- recommended barrel
+- recommended magazine / battery
+- recommended perk 1
+- recommended perk 2
+- listed Aegis alternatives / valid permutations
+- Aegis letter tier in the DIM note
+- recommended masterwork in the DIM note
+
+Full and partial matches are intentionally included, from the richest matching subsets down to individual recommended perks. This lets DIM show thumbs on every Aegis-recommended perk actually present on a roll, including cases where a weapon has multiple recommended perks in the same perk column.
+
+Example notes:
+
+- `Aegis S — 4/4 — MW: Reload`
+- `Aegis S — 2/4 — MW: Reload`
+
+The `x/4` value represents **slot coverage**, not the raw number of thumbs. A weapon can therefore show several recommended perk thumbs while still reading `2/4` if only two of the four recommendation slots are covered.
+
+DIM does **not** support masterworks as a wishlist matching condition, so the masterwork recommendation is informational only.
+
+Because partial matches are included, `is:wishlist` can also return weapons matching only one recommended perk. Use the perk thumbs together with the Aegis tier and `x/4` note to judge the roll.
+
+## Exact-hash manifest validation
+
+Destiny often has multiple item hashes for weapons sharing the same or similar names: original releases, reprises, event variants, Holofoil versions, legacy copies, Monument versions, and other reissues.
+
+Older builds attempted broader same-name alternate-hash coverage. The current build no longer assumes that two same-name weapons share compatible perk pools.
+
+For the November 24, 2026 build:
+
+- every retained item hash was checked against its **exact current Bungie manifest socket pool**
+- recommended perk hashes are only kept when they are valid for that exact weapon hash
+- unsafe legacy / reissue hashes are excluded instead of inheriting incompatible recommendations
+- alternate hashes are expanded only where exact high-tier signature matches support them
+- lower-tier reconstruction is only used where the recommendation can be uniquely derived from the validated higher-tier entries
+
+This prevents a recommendation intended for one release of a weapon from being incorrectly applied to another release with a different perk pool.
 
 ## Scope
 
 - PvE only
-- no PvP additions
-- no outside perk recommendations
-- based on the current detailed weapon tabs in the supplied 10/14/2026 Aegis Endgame Analysis workbook
-- alternate-hash support is currently derived from the user's supplied DIM weapon exports
+- no PvP recommendations
+- no outside perk recommendations added to Aegis's rankings
+- source recommendations originate from the supplied Aegis Endgame Analysis workbook
+- current item-hash and socket compatibility validated against the Bungie manifest for the November 24, 2026 build
+- unsafe or ambiguous historical variants are intentionally omitted rather than guessed
+
+## Current file
+
+The live DIM file is:
+
+`aegis_endgame_pve_dim_wishlist.txt`
+
+Current validated build:
+
+- **197,071 DIM wishlist entries**
+- **197,304 total lines**
+- **15,882,628 bytes**
+- header: `Aegis Endgame PvE — Manifest-Validated Exact-Hash Wishlist 11/24/2026`
 
 ## Updating
 
-Keep the filename `aegis_endgame_pve_dim_wishlist.txt` unchanged when updating the recommendations so the DIM subscription URL stays the same.
+Future updates should keep the live filename unchanged:
+
+`aegis_endgame_pve_dim_wishlist.txt`
+
+That preserves the existing raw GitHub URL already subscribed to in DIM. Any new build should be revalidated against the exact Bungie manifest item hashes and socket pools before replacing the live file.
