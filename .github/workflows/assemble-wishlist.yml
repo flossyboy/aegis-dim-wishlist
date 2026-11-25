@@ -1,0 +1,34 @@
+name: Assemble manifest-validated wishlist
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/assemble-wishlist.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble exact wishlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .upload_chunks/chunk_*.txt > aegis_endgame_pve_dim_wishlist.txt
+          test "$(wc -l < aegis_endgame_pve_dim_wishlist.txt)" -eq 197304
+          test "$(wc -c < aegis_endgame_pve_dim_wishlist.txt)" -eq 15882628
+          grep -q '^title:Aegis Endgame PvE — Manifest-Validated Exact-Hash Wishlist 11/24/2026$' aegis_endgame_pve_dim_wishlist.txt
+          rm -rf .upload_chunks
+          rm -f .github/workflows/assemble-wishlist.yml
+      - name: Commit assembled wishlist
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Assemble manifest-validated 2026-11-24 wishlist"
+          git push
