@@ -1,0 +1,127 @@
+name: Restore Aegis triage notes
+
+on:
+  push:
+    paths:
+      - '.github/workflows/restore_triage_notes_once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore exact pre-rebuild triage notes by item hash
+        shell: python
+        run: |
+          from pathlib import Path
+          import re, subprocess
+
+          CURRENT = Path("aegis_endgame_pve_dim_wishlist.txt")
+          current = CURRENT.read_text(encoding="utf-8")
+
+          # Last validated pre-rebuild wishlist that still had the triage notes.
+          old_commit = "18d3e83bd50d9f147b43eb679e6cae072d0dbc8c"
+          old = subprocess.check_output(
+              ["git","show",f"{old_commit}:aegis_endgame_pve_dim_wishlist.txt"],
+              text=True, encoding="utf-8"
+          )
+
+          item_re = re.compile(r"^dimwishlist:item=(\d+)&perks=")
+          note_re = re.compile(r"^//notes:(.+)$")
+
+          # Map each exact item hash to the nearest preceding Aegis triage note.
+          note_by_hash = {}
+          active_note = None
+          for line in old.splitlines():
+              nm = note_re.match(line)
+              if nm:
+                  txt = nm.group(1).strip()
+                  if "Aegis " in txt and "/4" in txt:
+                      active_note = txt
+                  else:
+                      active_note = None
+                  continue
+              im = item_re.match(line)
+              if im and active_note:
+                  h = int(im.group(1))
+                  note_by_hash.setdefault(h, active_note)
+
+          current_hashes = []
+          seen = set()
+          for line in current.splitlines():
+              im = item_re.match(line)
+              if im:
+                  h = int(im.group(1))
+                  if h not in seen:
+                      seen.add(h)
+                      current_hashes.append(h)
+
+          missing = [h for h in current_hashes if h not in note_by_hash]
+          print("Current exact hashes:", len(current_hashes))
+          print("Hashes with restored triage note:", len(current_hashes)-len(missing))
+          print("Hashes missing old triage note:", len(missing))
+          if missing:
+              print("Missing sample:", missing[:50])
+              raise SystemExit("Aborting: at least one current weapon hash lacks its original triage note")
+
+          # Remove any triage notes already present so this is idempotent, then
+          # insert one exact note immediately before the first roll for each hash.
+          out = []
+          inserted = set()
+          note_count = 0
+          for line in current.splitlines():
+              nm = note_re.match(line)
+              if nm and "Aegis " in nm.group(1) and "/4" in nm.group(1):
+                  continue
+
+              im = item_re.match(line)
+              if im:
+                  h = int(im.group(1))
+                  if h not in inserted:
+                      out.append(f"//notes:{note_by_hash[h]}")
+                      inserted.add(h)
+                      note_count += 1
+              out.append(line)
+
+          final = "\n".join(out).rstrip() + "\n"
+
+          # Hard guards: no weapon/hash or roll line changed.
+          def roll_lines(txt):
+              return [x for x in txt.splitlines() if x.startswith("dimwishlist:item=")]
+          before_rolls = roll_lines(current)
+          after_rolls = roll_lines(final)
+          if before_rolls != after_rolls:
+              raise SystemExit("Roll content changed while restoring notes")
+
+          final_hashes = []
+          seen2 = set()
+          for line in final.splitlines():
+              im = item_re.match(line)
+              if im:
+                  h = int(im.group(1))
+                  if h not in seen2:
+                      seen2.add(h); final_hashes.append(h)
+          if final_hashes != current_hashes:
+              raise SystemExit("Weapon hash order/coverage changed while restoring notes")
+
+          restored_notes = [x for x in final.splitlines() if x.startswith("//notes:Aegis ") and "/4" in x]
+          if len(restored_notes) != len(current_hashes):
+              raise SystemExit(f"Expected {len(current_hashes)} triage notes, got {len(restored_notes)}")
+
+          CURRENT.write_text(final, encoding="utf-8")
+          print("Restored triage notes:", note_count)
+
+      - name: Commit notes-only restoration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add aegis_endgame_pve_dim_wishlist.txt
+          git rm .github/workflows/restore_triage_notes_once.yml
+          git commit -m "Restore Aegis triage notes without changing wishlist rolls"
+          git push
