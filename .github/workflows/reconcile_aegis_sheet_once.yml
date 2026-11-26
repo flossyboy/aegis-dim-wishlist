@@ -103,22 +103,40 @@ jobs:
               out = set()
               if d:
                   for s in ((d.get("sockets") or {}).get("socketEntries") or []):
+                      # For a randomized weapon socket, ONLY the randomized plug
+                      # set represents drop-roll possibilities. Reusable sets often
+                      # contain enhanced/crafting variants with duplicate names.
+                      rps = s.get("randomizedPlugSetHash")
+                      if rps:
+                          pd = fetch_plugset(rps)
+                          if pd:
+                              for p in pd.get("reusablePlugItems") or []:
+                                  ph = p.get("plugItemHash")
+                                  if ph:
+                                      out.add(int(ph))
+                          continue
+
+                      # Fixed/non-random sockets: use directly reusable items first,
+                      # then reusable plug set, then initial plug as a last fallback.
+                      direct = s.get("reusablePlugItems") or []
+                      if direct:
+                          for p in direct:
+                              ph = p.get("plugItemHash")
+                              if ph:
+                                  out.add(int(ph))
+                          continue
+                      rps = s.get("reusablePlugSetHash")
+                      if rps:
+                          pd = fetch_plugset(rps)
+                          if pd:
+                              for p in pd.get("reusablePlugItems") or []:
+                                  ph = p.get("plugItemHash")
+                                  if ph:
+                                      out.add(int(ph))
+                          continue
                       initial = s.get("singleInitialItemHash")
                       if initial:
                           out.add(int(initial))
-                      for p in s.get("reusablePlugItems") or []:
-                          ph = p.get("plugItemHash")
-                          if ph:
-                              out.add(int(ph))
-                      for key in ("randomizedPlugSetHash","reusablePlugSetHash"):
-                          ps = s.get(key)
-                          if ps:
-                              pd = fetch_plugset(ps)
-                              if pd:
-                                  for p in pd.get("reusablePlugItems") or []:
-                                      ph = p.get("plugItemHash")
-                                      if ph:
-                                          out.add(int(ph))
               allowed_cache[h] = out
               return out
 
