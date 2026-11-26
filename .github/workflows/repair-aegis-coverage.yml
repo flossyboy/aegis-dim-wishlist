@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   repair:
-    if: github.event.issue.title == 'APPLY AEGIS COVERAGE REPAIR 2026-11-25'
+    if: github.event.issue.title == 'APPLY AEGIS COVERAGE REPAIR 2026-11-25 V2'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,8 +28,8 @@ jobs:
           lines[1]="description:Aegis PvE wishlist with 4/4 through 1/4 notes and recommended masterworks; all 748 current Aegis detailed weapon rows are covered, with exact item-hash compatibility audited and verified compatible current/legacy variants retained."
           p.write_text("\n".join(lines)+"\n",encoding="utf-8")
           PY
-          test "$(wc -l < aegis_endgame_pve_dim_wishlist.txt)" -eq 199972
-          test "$(wc -c < aegis_endgame_pve_dim_wishlist.txt)" -eq 16082677
+          test "$(wc -l < aegis_endgame_pve_dim_wishlist.txt)" -eq 199970
+          test "$(wc -c < aegis_endgame_pve_dim_wishlist.txt)" -eq 16082675
           test "$(grep -c '^dimwishlist:item=' aegis_endgame_pve_dim_wishlist.txt)" -eq 199396
           for h in 621450049 468276817 2213885190 3360937899 924095500 837298567 3922217119 2987244302 3229982889 4157371152 830651379 501329015 431721920; do
             grep -q "^dimwishlist:item=$h" aegis_endgame_pve_dim_wishlist.txt
