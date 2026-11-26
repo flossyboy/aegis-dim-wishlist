@@ -30,6 +30,12 @@ jobs:
           def base_name(label):
               return label.split("\n", 1)[0].strip()
 
+          def norm_name(label):
+              s = base_name(label)
+              # Manifest variant suffixes correspond to Aegis's second-line labels.
+              s = re.sub(r"\s*\((?:Timelost|Adept|Harrowed)\)\s*$", "", s, flags=re.I)
+              return s.casefold()
+
           # Download current official Bungie world-content DB.
           with urllib.request.urlopen("https://www.bungie.net/Platform/Destiny2/Manifest/", timeout=60) as r:
               meta = json.load(r)
@@ -82,7 +88,7 @@ jobs:
               if nm:
                   plug_name_cache[h] = nm
               if d.get("itemType") == 3 and nm:
-                  name_to_weapon_hashes[nm].append(h)
+                  name_to_weapon_hashes[norm_name(nm)].append(h)
 
           allowed_cache = {}
           def allowed_plugs(h):
@@ -123,13 +129,14 @@ jobs:
           for i,row in enumerate(source_rows):
               row["_id"] = i
               row["_base"] = base_name(row["n"])
+              row["_norm"] = norm_name(row["n"])
               row["_live_order"] = row["b"] + row["m"] + row["p1"] + row["p2"]
               row["_live"] = set(row["_live_order"])
               row["_crossed"] = set(row.get("x") or [])
 
           rows_by_name = defaultdict(list)
           for row in source_rows:
-              rows_by_name[row["_base"]].append(row)
+              rows_by_name[row["_norm"]].append(row)
 
           # Current exact item hashes. These MUST all survive unless no live Aegis
           # recommendation exists on that exact version (which is treated as a hard failure).
@@ -167,7 +174,7 @@ jobs:
           for h in current_hashes:
               d = fetch_inv(h)
               nm = (((d or {}).get("displayProperties") or {}).get("name") or "").strip()
-              candidates = rows_by_name.get(nm, [])
+              candidates = rows_by_name.get(norm_name(nm), [])
               if not candidates:
                   unassigned_current.append((h,nm,"name absent from Aegis rows"))
                   continue
@@ -195,14 +202,14 @@ jobs:
                   continue
 
               pool = []
-              for h in name_to_weapon_hashes.get(row["_base"], []):
+              for h in name_to_weapon_hashes.get(row["_norm"], []):
                   if h in hash_row and hash_row[h] != rid:
                       continue
                   score, matched, _ = match_info(h,row)
                   if score <= 0:
                       continue
                   # Do not steal a same-name hash from a clearly better Aegis row.
-                  sibling_scores = [match_info(h,other)[0] for other in rows_by_name[row["_base"]] if other["_id"] != rid]
+                  sibling_scores = [match_info(h,other)[0] for other in rows_by_name[row["_norm"]] if other["_id"] != rid]
                   if sibling_scores and max(sibling_scores) > score:
                       continue
                   pool.append((len(matched & missing), score, h, matched))
@@ -349,7 +356,7 @@ jobs:
               "==========================================",
               "Source rows: 748",
               f"Source labeled names: {len(set(r['n'] for r in source_rows))}",
-              f"Source manifest/base names: {len(set(r['_base'] for r in source_rows))}",
+              f"Source normalized manifest names: {len(set(r['_norm'] for r in source_rows))}",
               f"Existing exact item hashes preserved: {len(current_hashes)}",
               f"Additional exact item hashes added for missing source coverage: {len(set(added_hashes))}",
               f"Final exact item hashes: {len(final_hash_set)}",
