@@ -168,11 +168,13 @@ jobs:
           current_text = ROOT.read_text(encoding="utf-8")
           line_re = re.compile(r"^dimwishlist:item=(\d+)&perks=([0-9,]+)")
           current_hashes = []
+          current_perks_by_hash = defaultdict(set)
           seen = set()
           for line in current_text.splitlines():
               m = line_re.match(line)
               if m:
                   h = int(m.group(1))
+                  current_perks_by_hash[h].update(int(x) for x in m.group(2).split(",") if x)
                   if h not in seen:
                       seen.add(h); current_hashes.append(h)
 
@@ -304,12 +306,21 @@ jobs:
                   exact_names_norm = []
                   for nm in row["_live_order"]:
                       nn = norm_perk(nm)
-                      for ph in sorted(by_name.get(nn, [])):
-                          if ph not in seen_ph:
-                              seen_ph.add(ph)
-                              ordered_hashes.append(ph)
-                              exact_names_norm.append(nn)
-                              row_union_names.add(nn)
+                      candidates = sorted(set(by_name.get(nn, [])))
+                      if not candidates:
+                          continue
+                      # One Aegis recommendation name == one DIM plug hash.
+                      # Prefer a plug hash already present for this exact item in
+                      # the current validated wishlist; otherwise pick a stable
+                      # manifest candidate. All candidates are in this exact
+                      # item's allowed roll pool.
+                      existing = [ph for ph in candidates if ph in current_perks_by_hash.get(h, set())]
+                      ph = existing[0] if existing else candidates[0]
+                      if ph not in seen_ph:
+                          seen_ph.add(ph)
+                          ordered_hashes.append(ph)
+                      exact_names_norm.append(nn)
+                      row_union_names.add(nn)
 
                   # Explicitly ensure crossed-out names never enter this row.
                   for nm in row["_crossed"]:
@@ -323,8 +334,8 @@ jobs:
                   # Richest combinations first. Every non-empty subset gives DIM
                   # both multi-perk and partial-roll matching without inventing perks.
                   n = len(ordered_hashes)
-                  if n > 16:
-                      raise SystemExit(f"Unexpected recommendation count {n} for {row['n']} hash {h}")
+                  if n > len(row["_live_order"]):
+                      raise SystemExit(f"Duplicate recommendation hashes remained for {row['n']} hash {h}: {n}>{len(row['_live_order'])}")
                   fullmask = (1 << n) - 1
                   for mask in range(fullmask, 0, -1):
                       perks = [str(ordered_hashes[i]) for i in range(n) if mask & (1 << i)]
