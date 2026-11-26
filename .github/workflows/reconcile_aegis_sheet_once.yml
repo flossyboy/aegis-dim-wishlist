@@ -17,7 +17,7 @@ jobs:
       - name: Rebuild wishlist from original Aegis rows and exact manifest pools
         shell: python
         run: |
-          import base64, gzip, io, itertools, json, re, sqlite3, urllib.request, zipfile
+          import base64, gzip, io, itertools, json, re, sqlite3, unicodedata, urllib.request, zipfile
           from collections import defaultdict
           from pathlib import Path
 
@@ -35,6 +35,11 @@ jobs:
               # Manifest variant suffixes correspond to Aegis's second-line labels.
               s = re.sub(r"\s*\((?:Timelost|Adept|Harrowed)\)\s*$", "", s, flags=re.I)
               return s.casefold()
+
+          def norm_perk(s):
+              s = unicodedata.normalize("NFKC", s or "")
+              s = s.replace("’", "'").replace("‘", "'").replace("–", "-").replace("—", "-")
+              return re.sub(r"\s+", " ", s).strip().casefold()
 
           # Download current official Bungie world-content DB.
           with urllib.request.urlopen("https://www.bungie.net/Platform/Destiny2/Manifest/", timeout=60) as r:
@@ -132,7 +137,9 @@ jobs:
               row["_norm"] = norm_name(row["n"])
               row["_live_order"] = row["b"] + row["m"] + row["p1"] + row["p2"]
               row["_live"] = set(row["_live_order"])
+              row["_live_norm"] = {norm_perk(x) for x in row["_live_order"]}
               row["_crossed"] = set(row.get("x") or [])
+              row["_crossed_norm"] = {norm_perk(x) for x in row.get("x") or []}
 
           rows_by_name = defaultdict(list)
           for row in source_rows:
@@ -154,11 +161,11 @@ jobs:
           # Score how strongly an exact hash matches one Aegis row.
           def match_info(h,row):
               allowed = allowed_plugs(h)
-              names = {plug_name(p) for p in allowed if plug_name(p)}
-              b = set(row["b"]) & names
-              m = set(row["m"]) & names
-              p1 = set(row["p1"]) & names
-              p2 = set(row["p2"]) & names
+              names = {norm_perk(plug_name(p)) for p in allowed if plug_name(p)}
+              b = {norm_perk(x) for x in row["b"]} & names
+              m = {norm_perk(x) for x in row["m"]} & names
+              p1 = {norm_perk(x) for x in row["p1"]} & names
+              p2 = {norm_perk(x) for x in row["p2"]} & names
               # Perk columns matter most for same-name version disambiguation.
               score = len(b) + len(m) + 5*len(p1) + 5*len(p2)
               if p1: score += 3
@@ -197,7 +204,7 @@ jobs:
               covered = set()
               for h in assignments[rid]:
                   covered |= match_info(h,row)[1]
-              missing = set(row["_live"]) - covered
+              missing = set(row["_live_norm"]) - covered
               if not missing:
                   continue
 
@@ -225,13 +232,13 @@ jobs:
                   if h not in current_hashes:
                       added_hashes.append(h)
                   covered |= matched
-                  missing = set(row["_live"]) - covered
+                  missing = set(row["_live_norm"]) - covered
                   pool = [(len(mi & missing), sc, hh, mi) for _,sc,hh,mi in pool if hh != h]
 
               if missing:
                   raise SystemExit(
                       f"Cannot represent all live Aegis perks for row {rid} "
-                      f"{row['s']} / {row['n']!r}; missing={sorted(missing)}"
+                      f"{row['s']} / {row['n']!r}; missing_norm={sorted(missing)}"
                   )
 
           # Ensure every one of 748 source rows has at least one exact hash.
@@ -273,22 +280,23 @@ jobs:
                   for ph in allowed:
                       nm = plug_name(ph)
                       if nm:
-                          by_name[nm].append(ph)
+                          by_name[norm_perk(nm)].append(ph)
 
                   ordered_hashes = []
                   seen_ph = set()
-                  exact_names = []
+                  exact_names_norm = []
                   for nm in row["_live_order"]:
-                      for ph in sorted(by_name.get(nm, [])):
+                      nn = norm_perk(nm)
+                      for ph in sorted(by_name.get(nn, [])):
                           if ph not in seen_ph:
                               seen_ph.add(ph)
                               ordered_hashes.append(ph)
-                              exact_names.append(nm)
-                              row_union_names.add(nm)
+                              exact_names_norm.append(nn)
+                              row_union_names.add(nn)
 
                   # Explicitly ensure crossed-out names never enter this row.
                   for nm in row["_crossed"]:
-                      if nm in exact_names:
+                      if norm_perk(nm) in exact_names_norm:
                           crossed_leaks.append((rid,row["n"],h,nm))
 
                   if not ordered_hashes:
@@ -306,9 +314,10 @@ jobs:
                       generated.append(f"dimwishlist:item={h}&perks=" + ",".join(perks))
                   generated.append("")
 
-              miss = set(row["_live"]) - row_union_names
+              miss = set(row["_live_norm"]) - row_union_names
               if miss:
-                  missing_row_perks.append((rid,row["s"],row["n"],sorted(miss)))
+                  originals = [x for x in row["_live_order"] if norm_perk(x) in miss]
+                  missing_row_perks.append((rid,row["s"],row["n"],originals))
               report_rows.append((rid,row["s"],row["n"],len(set(assignments[rid])),len(row["_live"]),len(row_union_names)))
 
           if crossed_leaks:
