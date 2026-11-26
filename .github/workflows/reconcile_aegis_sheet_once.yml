@@ -1,0 +1,383 @@
+name: One-shot Aegis sheet reconciliation
+
+on:
+  push:
+    paths:
+      - '.github/workflows/reconcile_aegis_sheet_once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild wishlist from original Aegis rows and exact manifest pools
+        shell: python
+        run: |
+          import base64, gzip, io, itertools, json, re, sqlite3, urllib.request, zipfile
+          from collections import defaultdict
+          from pathlib import Path
+
+          ROOT = Path("aegis_endgame_pve_dim_wishlist.txt")
+          SRC = Path(".github/aegis_source_2026-10-15.json.gz.b64")
+          source_rows = json.loads(gzip.decompress(base64.b64decode(SRC.read_text().strip())).decode("utf-8"))
+          if len(source_rows) != 748:
+              raise SystemExit(f"Source row count changed: {len(source_rows)} != 748")
+
+          def base_name(label):
+              return label.split("\n", 1)[0].strip()
+
+          # Download current official Bungie world-content DB.
+          with urllib.request.urlopen("https://www.bungie.net/Platform/Destiny2/Manifest/", timeout=60) as r:
+              meta = json.load(r)
+          db_rel = meta["Response"]["mobileWorldContentPaths"]["en"]
+          with urllib.request.urlopen("https://www.bungie.net" + db_rel, timeout=180) as r:
+              payload = r.read()
+          if payload[:2] == b"PK":
+              z = zipfile.ZipFile(io.BytesIO(payload))
+              db_bytes = z.read(z.namelist()[0])
+          else:
+              db_bytes = payload
+          Path("world.sqlite").write_bytes(db_bytes)
+          con = sqlite3.connect("world.sqlite")
+          cur = con.cursor()
+
+          def u32(i):
+              return int(i) & 0xffffffff
+
+          inv_cache = {}
+          plugset_cache = {}
+
+          def fetch_inv(h):
+              h = int(h)
+              if h in inv_cache:
+                  return inv_cache[h]
+              signed = h if h < 2**31 else h - 2**32
+              row = cur.execute('SELECT json FROM "DestinyInventoryItemDefinition" WHERE id=?', (signed,)).fetchone()
+              d = json.loads(row[0]) if row else None
+              inv_cache[h] = d
+              return d
+
+          def fetch_plugset(h):
+              h = int(h)
+              if h in plugset_cache:
+                  return plugset_cache[h]
+              signed = h if h < 2**31 else h - 2**32
+              row = cur.execute('SELECT json FROM "DestinyPlugSetDefinition" WHERE id=?', (signed,)).fetchone()
+              d = json.loads(row[0]) if row else None
+              plugset_cache[h] = d
+              return d
+
+          # Inventory index: all weapon hashes by exact display name, plus plug names.
+          name_to_weapon_hashes = defaultdict(list)
+          plug_name_cache = {}
+          for sid, raw in cur.execute('SELECT id,json FROM "DestinyInventoryItemDefinition"'):
+              d = json.loads(raw)
+              h = u32(sid)
+              dp = d.get("displayProperties") or {}
+              nm = (dp.get("name") or "").strip()
+              if nm:
+                  plug_name_cache[h] = nm
+              if d.get("itemType") == 3 and nm:
+                  name_to_weapon_hashes[nm].append(h)
+
+          allowed_cache = {}
+          def allowed_plugs(h):
+              if h in allowed_cache:
+                  return allowed_cache[h]
+              d = fetch_inv(h)
+              out = set()
+              if d:
+                  for s in ((d.get("sockets") or {}).get("socketEntries") or []):
+                      initial = s.get("singleInitialItemHash")
+                      if initial:
+                          out.add(int(initial))
+                      for p in s.get("reusablePlugItems") or []:
+                          ph = p.get("plugItemHash")
+                          if ph:
+                              out.add(int(ph))
+                      for key in ("randomizedPlugSetHash","reusablePlugSetHash"):
+                          ps = s.get(key)
+                          if ps:
+                              pd = fetch_plugset(ps)
+                              if pd:
+                                  for p in pd.get("reusablePlugItems") or []:
+                                      ph = p.get("plugItemHash")
+                                      if ph:
+                                          out.add(int(ph))
+              allowed_cache[h] = out
+              return out
+
+          def plug_name(h):
+              if h in plug_name_cache:
+                  return plug_name_cache[h]
+              d = fetch_inv(h)
+              nm = (((d or {}).get("displayProperties") or {}).get("name") or "").strip()
+              plug_name_cache[h] = nm
+              return nm
+
+          # Source helpers.
+          for i,row in enumerate(source_rows):
+              row["_id"] = i
+              row["_base"] = base_name(row["n"])
+              row["_live_order"] = row["b"] + row["m"] + row["p1"] + row["p2"]
+              row["_live"] = set(row["_live_order"])
+              row["_crossed"] = set(row.get("x") or [])
+
+          rows_by_name = defaultdict(list)
+          for row in source_rows:
+              rows_by_name[row["_base"]].append(row)
+
+          # Current exact item hashes. These MUST all survive unless no live Aegis
+          # recommendation exists on that exact version (which is treated as a hard failure).
+          current_text = ROOT.read_text(encoding="utf-8")
+          line_re = re.compile(r"^dimwishlist:item=(\d+)&perks=([0-9,]+)")
+          current_hashes = []
+          seen = set()
+          for line in current_text.splitlines():
+              m = line_re.match(line)
+              if m:
+                  h = int(m.group(1))
+                  if h not in seen:
+                      seen.add(h); current_hashes.append(h)
+
+          # Score how strongly an exact hash matches one Aegis row.
+          def match_info(h,row):
+              allowed = allowed_plugs(h)
+              names = {plug_name(p) for p in allowed if plug_name(p)}
+              b = set(row["b"]) & names
+              m = set(row["m"]) & names
+              p1 = set(row["p1"]) & names
+              p2 = set(row["p2"]) & names
+              # Perk columns matter most for same-name version disambiguation.
+              score = len(b) + len(m) + 5*len(p1) + 5*len(p2)
+              if p1: score += 3
+              if p2: score += 3
+              if b: score += 1
+              if m: score += 1
+              return score, (b|m|p1|p2), names
+
+          assignments = defaultdict(list)     # row id -> hashes
+          hash_row = {}
+          unassigned_current = []
+
+          for h in current_hashes:
+              d = fetch_inv(h)
+              nm = (((d or {}).get("displayProperties") or {}).get("name") or "").strip()
+              candidates = rows_by_name.get(nm, [])
+              if not candidates:
+                  unassigned_current.append((h,nm,"name absent from Aegis rows"))
+                  continue
+              ranked = sorted(((match_info(h,r)[0], r["_id"], r) for r in candidates), reverse=True)
+              best_score, _, best = ranked[0]
+              if best_score <= 0:
+                  unassigned_current.append((h,nm,"no live Aegis recommendation rolls on exact hash"))
+                  continue
+              hash_row[h] = best["_id"]
+              assignments[best["_id"]].append(h)
+
+          if unassigned_current:
+              raise SystemExit("Existing wishlist hashes would be lost: " + repr(unassigned_current[:30]))
+
+          # Greedily add exact manifest hashes until EVERY non-crossed-out
+          # recommendation in EVERY Aegis row is represented somewhere valid.
+          added_hashes = []
+          for row in source_rows:
+              rid = row["_id"]
+              covered = set()
+              for h in assignments[rid]:
+                  covered |= match_info(h,row)[1]
+              missing = set(row["_live"]) - covered
+              if not missing:
+                  continue
+
+              pool = []
+              for h in name_to_weapon_hashes.get(row["_base"], []):
+                  if h in hash_row and hash_row[h] != rid:
+                      continue
+                  score, matched, _ = match_info(h,row)
+                  if score <= 0:
+                      continue
+                  # Do not steal a same-name hash from a clearly better Aegis row.
+                  sibling_scores = [match_info(h,other)[0] for other in rows_by_name[row["_base"]] if other["_id"] != rid]
+                  if sibling_scores and max(sibling_scores) > score:
+                      continue
+                  pool.append((len(matched & missing), score, h, matched))
+
+              while missing:
+                  pool.sort(reverse=True)
+                  choice = next((x for x in pool if x[0] > 0 and x[2] not in assignments[rid]), None)
+                  if not choice:
+                      break
+                  _, _, h, matched = choice
+                  assignments[rid].append(h)
+                  hash_row[h] = rid
+                  if h not in current_hashes:
+                      added_hashes.append(h)
+                  covered |= matched
+                  missing = set(row["_live"]) - covered
+                  pool = [(len(mi & missing), sc, hh, mi) for _,sc,hh,mi in pool if hh != h]
+
+              if missing:
+                  raise SystemExit(
+                      f"Cannot represent all live Aegis perks for row {rid} "
+                      f"{row['s']} / {row['n']!r}; missing={sorted(missing)}"
+                  )
+
+          # Ensure every one of 748 source rows has at least one exact hash.
+          empty_rows = [r for r in source_rows if not assignments[r["_id"]]]
+          if empty_rows:
+              raise SystemExit("Aegis rows with no exact item hash: " + repr([(r["s"],r["n"]) for r in empty_rows[:30]]))
+
+          # Build exact-hash desired recommendation sets. Every hash receives ONLY
+          # live (not crossed-out) Aegis recommendations that actually exist in
+          # that exact hash's manifest socket pool.
+          generated = []
+          report_rows = []
+          final_hashes = []
+          final_hash_set = set()
+          crossed_leaks = []
+          missing_row_perks = []
+
+          title = "title:Aegis Endgame PvE — Original-Sheet Exact-Hash Reconciliation 10/15/2026"
+          desc = ("description:748 Aegis weapon rows reconciled directly from the original workbook. "
+                  "Crossed-out recommendations are excluded; every listed perk hash is validated against "
+                  "the exact Bungie item hash.")
+          generated.extend([
+              title, desc, "",
+              "// Source: Destiny 2_ Endgame Analysis(5).xlsx (byte-identical to (4).xlsx).",
+              "// Rule: Barrel/Mag/Perk 1/Perk 2 live recommendations included; strikethrough excluded.",
+              "// DIM cannot wishlist masterworks, so MW remains informational only.",
+              ""
+          ])
+
+          for row in source_rows:
+              rid = row["_id"]
+              row_union_names = set()
+              generated.append(f"// {row['n'].replace(chr(10),' — ')} | {row['s']} | Aegis {row['t']}")
+              if row.get("x"):
+                  generated.append("// Crossed out in Aegis, intentionally excluded: " + ", ".join(row["x"]))
+              for h in sorted(set(assignments[rid])):
+                  allowed = allowed_plugs(h)
+                  by_name = defaultdict(list)
+                  for ph in allowed:
+                      nm = plug_name(ph)
+                      if nm:
+                          by_name[nm].append(ph)
+
+                  ordered_hashes = []
+                  seen_ph = set()
+                  exact_names = []
+                  for nm in row["_live_order"]:
+                      for ph in sorted(by_name.get(nm, [])):
+                          if ph not in seen_ph:
+                              seen_ph.add(ph)
+                              ordered_hashes.append(ph)
+                              exact_names.append(nm)
+                              row_union_names.add(nm)
+
+                  # Explicitly ensure crossed-out names never enter this row.
+                  for nm in row["_crossed"]:
+                      if nm in exact_names:
+                          crossed_leaks.append((rid,row["n"],h,nm))
+
+                  if not ordered_hashes:
+                      raise SystemExit(f"Assigned hash {h} has zero live recommendations for {row['n']!r}")
+
+                  final_hash_set.add(h); final_hashes.append(h)
+                  # Richest combinations first. Every non-empty subset gives DIM
+                  # both multi-perk and partial-roll matching without inventing perks.
+                  n = len(ordered_hashes)
+                  if n > 16:
+                      raise SystemExit(f"Unexpected recommendation count {n} for {row['n']} hash {h}")
+                  fullmask = (1 << n) - 1
+                  for mask in range(fullmask, 0, -1):
+                      perks = [str(ordered_hashes[i]) for i in range(n) if mask & (1 << i)]
+                      generated.append(f"dimwishlist:item={h}&perks=" + ",".join(perks))
+                  generated.append("")
+
+              miss = set(row["_live"]) - row_union_names
+              if miss:
+                  missing_row_perks.append((rid,row["s"],row["n"],sorted(miss)))
+              report_rows.append((rid,row["s"],row["n"],len(set(assignments[rid])),len(row["_live"]),len(row_union_names)))
+
+          if crossed_leaks:
+              raise SystemExit("Crossed-out perk leak: " + repr(crossed_leaks[:20]))
+          if missing_row_perks:
+              raise SystemExit("Live Aegis perks still missing: " + repr(missing_row_perks[:20]))
+
+          # No exact item hash that was already in the wishlist may disappear.
+          lost_hashes = sorted(set(current_hashes) - final_hash_set)
+          if lost_hashes:
+              raise SystemExit("Existing exact hashes lost: " + repr(lost_hashes[:50]))
+
+          final_text = "\n".join(generated).rstrip() + "\n"
+
+          # Final exact-hash validation of every generated line.
+          bad_lines = []
+          for line in final_text.splitlines():
+              m = line_re.match(line)
+              if not m:
+                  continue
+              h = int(m.group(1))
+              perks = [int(x) for x in m.group(2).split(",") if x]
+              allowed = allowed_plugs(h)
+              bad = [p for p in perks if p not in allowed]
+              if bad:
+                  bad_lines.append((h,bad,line[:240]))
+                  if len(bad_lines) >= 20:
+                      break
+          if bad_lines:
+              raise SystemExit("Manifest-invalid generated rolls: " + repr(bad_lines))
+
+          # Explicit regression guards from the user's examples.
+          lotus_rows = [r for r in source_rows if r["_base"] == "Lotus-Eater"]
+          if len(lotus_rows) != 1 or "Volatile Launch" not in lotus_rows[0]["_live"] or "Shoot to Loot" not in lotus_rows[0]["_crossed"]:
+              raise SystemExit("Lotus-Eater source rule mismatch")
+          unvoiced_rows = [r for r in source_rows if r["_base"] == "Unvoiced"]
+          if len(unvoiced_rows) != 1 or "Elemental Honing" not in unvoiced_rows[0]["_crossed"]:
+              raise SystemExit("Unvoiced source rule mismatch")
+
+          ROOT.write_text(final_text, encoding="utf-8")
+
+          roll_count = sum(1 for x in generated if x.startswith("dimwishlist:item="))
+          report = [
+              "Aegis original-sheet reconciliation report",
+              "==========================================",
+              "Source rows: 748",
+              f"Source labeled names: {len(set(r['n'] for r in source_rows))}",
+              f"Source manifest/base names: {len(set(r['_base'] for r in source_rows))}",
+              f"Existing exact item hashes preserved: {len(current_hashes)}",
+              f"Additional exact item hashes added for missing source coverage: {len(set(added_hashes))}",
+              f"Final exact item hashes: {len(final_hash_set)}",
+              f"Final wishlist roll lines: {roll_count}",
+              "",
+              "Crossed-out source recommendations (excluded):",
+          ]
+          for r in source_rows:
+              if r.get("x"):
+                  report.append(f"- {r['s']} / {r['n'].replace(chr(10),' — ')}: {', '.join(r['x'])}")
+          report += ["", "Added exact hashes:"]
+          for h in sorted(set(added_hashes)):
+              d = fetch_inv(h) or {}
+              report.append(f"- {h}: {((d.get('displayProperties') or {}).get('name') or 'UNKNOWN')}")
+          report += ["", "Per-row coverage:"]
+          for rid,s,nm,nh,need,got in report_rows:
+              report.append(f"- {rid:03d} | {s} | {nm.replace(chr(10),' — ')} | hashes={nh} | live perks={got}/{need}")
+          Path("aegis_sheet_reconciliation_report.txt").write_text("\n".join(report)+"\n", encoding="utf-8")
+
+          print("\n".join(report[:30]))
+          print(f"FINAL_ROLLS={roll_count}")
+          print(f"FINAL_HASHES={len(final_hash_set)}")
+
+      - name: Commit only after all 748 rows and every live perk pass
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add aegis_endgame_pve_dim_wishlist.txt aegis_sheet_reconciliation_report.txt
+          git rm .github/workflows/reconcile_aegis_sheet_once.yml
+          git commit -m "Reconcile wishlist 1:1 to original Aegis perk recommendations"
+          git push
