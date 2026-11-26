@@ -2,9 +2,9 @@
 
 A custom [Destiny Item Manager](https://destinyitemmanager.com/) PvE wishlist built from Aegis's Endgame Analysis recommendations and validated against the live Bungie weapon manifest.
 
-**Current build:** November 24, 2026  
-**Wishlist entries:** 197,071  
-**Validation:** exact item-hash / exact socket-pool validation
+**Current build:** November 25, 2026  
+**Wishlist entries:** 199,396  
+**Validation:** exact item-hash audit + full current Aegis-row coverage check
 
 ## Add it to DIM
 
@@ -74,10 +74,10 @@ The live DIM file is:
 
 Current validated build:
 
-- **197,071 DIM wishlist entries**
-- **197,304 total lines**
-- **15,882,628 bytes**
-- header: `Aegis Endgame PvE — Manifest-Validated Exact-Hash Wishlist 11/24/2026`
+- **199,396 DIM wishlist entries**
+- **199,970 total lines**
+- **16,082,675 bytes**
+- header: `Aegis Endgame PvE — Manifest-Audited + Coverage-Repaired Wishlist 11/25/2026`
 
 ## Updating
 
@@ -86,3 +86,17 @@ Future updates should keep the live filename unchanged:
 `aegis_endgame_pve_dim_wishlist.txt`
 
 That preserves the existing raw GitHub URL already subscribed to in DIM. Any new build should be revalidated against the exact Bungie manifest item hashes and socket pools before replacing the live file.
+
+
+## November 25, 2026 coverage audit
+
+A full row-by-row comparison against all **748 current weapon rows** in Aegis's detailed weapon tabs found four rows that had been accidentally omitted by the November 24 exact-hash validation pass:
+
+- Adamantite — A tier
+- Unvoiced — A tier
+- Lotus-Eater — S tier
+- Nature of the Beast — E tier
+
+Those rows were restored along with verified compatible exact-hash variants where applicable. The special Zaouli's Bane and Chattering Bone Pantheon/legacy mappings were rechecked and remained present.
+
+After the repair, every current Aegis detailed weapon row has wishlist coverage.
