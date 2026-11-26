@@ -1,0 +1,29 @@
+Rolls before: 199511
+Invalid roll lines removed: 1742
+Rolls after: 197769
+Weapon names before: 736
+Weapon names after: 736
+Elemental Honing invalid-line hits removed: 64
+
+Affected item hashes:
+3922217119: 448 invalid lines removed | Lotus-Eater
+924095500: 384 invalid lines removed | Lotus-Eater
+837298567: 384 invalid lines removed | Lotus-Eater
+621450049: 192 invalid lines removed | Adamantite
+2987244302: 128 invalid lines removed | Adamantite
+3229982889: 128 invalid lines removed | Adamantite
+2213885190: 64 invalid lines removed | Unvoiced
+468276817: 14 invalid lines removed | Nature of the Beast
+
+Invalid perk hashes:
+332773068: 768
+3700496672: 512
+3201496230: 256
+1421772400: 256
+3708227201: 256
+923806249: 128
+243981275: 128
+1089671869: 64
+1926090094: 8
+1431678320: 8
+1820235745: 8
