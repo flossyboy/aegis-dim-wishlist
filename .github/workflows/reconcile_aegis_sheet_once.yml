@@ -210,15 +210,12 @@ jobs:
 
               pool = []
               for h in name_to_weapon_hashes.get(row["_norm"], []):
-                  if h in hash_row and hash_row[h] != rid:
-                      continue
                   score, matched, _ = match_info(h,row)
                   if score <= 0:
                       continue
-                  # Do not steal a same-name hash from a clearly better Aegis row.
-                  sibling_scores = [match_info(h,other)[0] for other in rows_by_name[row["_norm"]] if other["_id"] != rid]
-                  if sibling_scores and max(sibling_scores) > score:
-                      continue
+                  # A Bungie hash may legitimately overlap multiple Aegis version
+                  # rows after pool migrations. It may satisfy more than one row,
+                  # but each row's generated recommendation subsets stay separate.
                   pool.append((len(matched & missing), score, h, matched))
 
               while missing:
@@ -228,7 +225,9 @@ jobs:
                       break
                   _, _, h, matched = choice
                   assignments[rid].append(h)
-                  hash_row[h] = rid
+                  # Do not overwrite hash_row here; shared candidate hashes can
+                  # satisfy multiple Aegis rows without changing the existing hash's
+                  # primary assignment used for preservation checks.
                   if h not in current_hashes:
                       added_hashes.append(h)
                   covered |= matched
