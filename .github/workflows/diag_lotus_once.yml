@@ -1,0 +1,70 @@
+name: Diagnose Lotus-Eater Volatile Launch hashes
+
+on:
+  push:
+    paths:
+      - '.github/workflows/diag_lotus_once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect exact Lotus-Eater plug pools
+        shell: python
+        run: |
+          import json,re,sqlite3,urllib.request,zipfile,io
+          from pathlib import Path
+          hashes=[3922217119,924095500,837298567]
+          txt=Path("aegis_endgame_pve_dim_wishlist.txt").read_text()
+          with urllib.request.urlopen("https://www.bungie.net/Platform/Destiny2/Manifest/") as r:
+              meta=json.load(r)
+          with urllib.request.urlopen("https://www.bungie.net"+meta["Response"]["mobileWorldContentPaths"]["en"]) as r:
+              raw=r.read()
+          if raw[:2]==b"PK":
+              z=zipfile.ZipFile(io.BytesIO(raw)); db=z.read(z.namelist()[0])
+          else: db=raw
+          Path("w.sqlite").write_bytes(db)
+          con=sqlite3.connect("w.sqlite"); cur=con.cursor()
+          def row(table,h):
+              s=h if h<2**31 else h-2**32
+              r=cur.execute(f'SELECT json FROM "{table}" WHERE id=?',(s,)).fetchone()
+              return json.loads(r[0]) if r else None
+          def plugname(h):
+              d=row("DestinyInventoryItemDefinition",h)
+              return ((d or {}).get("displayProperties") or {}).get("name","")
+          def plugs(h):
+              d=row("DestinyInventoryItemDefinition",h); out=set()
+              for s in ((d.get("sockets") or {}).get("socketEntries") or []):
+                  for key in ("randomizedPlugSetHash","reusablePlugSetHash"):
+                      ps=s.get(key)
+                      if ps:
+                          pd=row("DestinyPlugSetDefinition",ps)
+                          if pd:
+                              for p in pd.get("reusablePlugItems") or []:
+                                  if p.get("plugItemHash"): out.add(int(p["plugItemHash"]))
+                  for p in s.get("reusablePlugItems") or []:
+                      if p.get("plugItemHash"): out.add(int(p["plugItemHash"]))
+                  if s.get("singleInitialItemHash"): out.add(int(s["singleInitialItemHash"]))
+              return out
+          for h in hashes:
+              print("ITEM",h)
+              vals=sorted((p,plugname(p)) for p in plugs(h) if plugname(p)=="Volatile Launch")
+              print("VOLATILE",vals)
+              used=set()
+              for line in txt.splitlines():
+                  if line.startswith(f"dimwishlist:item={h}&perks="):
+                      used.update(int(x) for x in line.split("&perks=",1)[1].split("#",1)[0].split(",") if x)
+              print("USED_VOLATILE",sorted((p,plugname(p)) for p in used if plugname(p)=="Volatile Launch"))
+              print("USED_373417387",373417387 in used)
+          Path("lotus_diag.txt").write_text("done")
+      - name: Remove diagnostic workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/diag_lotus_once.yml
+          git commit -m "Remove Lotus-Eater diagnostic workflow"
+          git push
