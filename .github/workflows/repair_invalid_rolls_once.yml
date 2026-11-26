@@ -150,10 +150,11 @@ jobs:
               print("WOULD REMOVE WEAPON NAMES:", vanished_names)
               raise SystemExit("Repair aborted: at least one weapon name would disappear.")
 
-          # Coverage count must remain exactly 748 Aegis weapon names.
-          if len(before_weapon_names) != 748 or len(after_weapon_names) != 748:
+          # Coverage must be exactly unchanged. The workbook contains repeated
+          # weapon names/versions, so unique-name count is not the same as row count.
+          if after_weapon_names != before_weapon_names:
               raise SystemExit(
-                  f"Aegis coverage mismatch: before={len(before_weapon_names)} after={len(after_weapon_names)} expected=748"
+                  f"Aegis weapon-name coverage changed: before={len(before_weapon_names)} after={len(after_weapon_names)}"
               )
 
           # Explicit regression guard from the user's screenshot.
