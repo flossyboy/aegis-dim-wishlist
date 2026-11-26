@@ -1,0 +1,767 @@
+Aegis original-sheet reconciliation report
+==========================================
+Source rows: 748
+Source labeled names: 747
+Source normalized manifest names: 729
+Existing exact item hashes preserved: 995
+Additional exact item hashes added for missing source coverage: 0
+Final exact item hashes: 995
+Final wishlist roll lines: 197949
+
+Crossed-out source recommendations (excluded):
+- Autos / Adamantite: Slice, Attrition Orbs
+- Shotguns / Unvoiced: Elemental Honing
+- Rocket Sidearms / Lotus-Eater: Shoot to Loot
+- HGLs / Edge Transit — BRAVE version: Sticky Grenades
+
+Added exact hashes:
+
+Per-row coverage:
+- 000 | Autos | No Hesitation | hashes=1 | live perks=7/7
+- 001 | Autos | Cusp Sempiternal | hashes=1 | live perks=8/8
+- 002 | Autos | DECATUR 02 | hashes=1 | live perks=8/8
+- 003 | Autos | Reckless Oracle — Pantheon version | hashes=2 | live perks=10/10
+- 004 | Autos | Gnawing Hunger | hashes=1 | live perks=7/7
+- 005 | Autos | Reghusk's Pledge | hashes=1 | live perks=8/8
+- 006 | Autos | Positive Outlook | hashes=2 | live perks=8/8
+- 007 | Autos | Age-Old Bond | hashes=1 | live perks=7/7
+- 008 | Autos | Reckless Oracle | hashes=1 | live perks=7/7
+- 009 | Autos | The Riposte | hashes=1 | live perks=9/9
+- 010 | Autos | Scathelocke | hashes=1 | live perks=7/7
+- 011 | Autos | Abyss Defiant | hashes=1 | live perks=6/6
+- 012 | Autos | Pluperfect | hashes=1 | live perks=6/6
+- 013 | Autos | VS Pyroelectric Propellant | hashes=1 | live perks=7/7
+- 014 | Autos | Snipehunt Mk. 47 | hashes=2 | live perks=8/8
+- 015 | Autos | Adamantite | hashes=3 | live perks=6/6
+- 016 | Autos | Arctic Haze | hashes=1 | live perks=7/7
+- 017 | Autos | The Ringing Nail | hashes=2 | live perks=10/10
+- 018 | Autos | Seventh Seraph Carbine | hashes=1 | live perks=7/7
+- 019 | Autos | Chrysura Melo | hashes=1 | live perks=6/6
+- 020 | Autos | The Summoner | hashes=1 | live perks=7/7
+- 021 | Autos | Everburning Glitz | hashes=1 | live perks=8/8
+- 022 | Autos | Origin Story | hashes=2 | live perks=6/6
+- 023 | Autos | Tigerspite | hashes=1 | live perks=8/8
+- 024 | Autos | Chroma Rush | hashes=1 | live perks=7/7
+- 025 | Autos | Zealous Ideal | hashes=1 | live perks=6/6
+- 026 | Autos | Ros Arago IV | hashes=1 | live perks=7/7
+- 027 | Autos | The Forward Path | hashes=1 | live perks=7/7
+- 028 | Autos | Lethal Abundance | hashes=1 | live perks=9/9
+- 029 | Autos | Come to Pass | hashes=1 | live perks=6/6
+- 030 | Autos | Rufus's Fury | hashes=1 | live perks=7/7
+- 031 | Autos | Auric Disabler | hashes=1 | live perks=9/9
+- 032 | Autos | Intercalary | hashes=1 | live perks=8/8
+- 033 | Autos | Trendsetter | hashes=1 | live perks=8/8
+- 034 | Autos | Prosecutor — RotN version | hashes=1 | live perks=7/7
+- 035 | Autos | Shadow Price | hashes=2 | live perks=6/6
+- 036 | Autos | Sorrow's Verse | hashes=2 | live perks=7/7
+- 037 | Autos | Veiled Threat | hashes=1 | live perks=8/8
+- 038 | Autos | Giver's Blessing | hashes=1 | live perks=8/8
+- 039 | Autos | Prosecutor | hashes=1 | live perks=8/8
+- 040 | Autos | Ahab Char | hashes=1 | live perks=6/6
+- 041 | Autos | Arc Logic | hashes=1 | live perks=7/7
+- 042 | Autos | Breakneck | hashes=2 | live perks=7/7
+- 043 | Autos | Braytech Werewolf | hashes=1 | live perks=7/7
+- 044 | Autos | Fair Judgment | hashes=1 | live perks=7/7
+- 045 | Autos | Steelfeather Repeater | hashes=1 | live perks=6/6
+- 046 | Autos | Khvostov 7G-02 | hashes=1 | live perks=6/6
+- 047 | Autos | Old Sterling | hashes=1 | live perks=6/6
+- 048 | Autos | Herod-C | hashes=2 | live perks=7/7
+- 049 | Autos | False Promises | hashes=1 | live perks=6/6
+- 050 | Autos | Duty Bound | hashes=2 | live perks=7/7
+- 051 | Autos | Dark Decider | hashes=2 | live perks=7/7
+- 052 | Autos | Coronach-22 | hashes=1 | live perks=6/6
+- 053 | Autos | Horror Story | hashes=2 | live perks=6/6
+- 054 | Autos | Krait | hashes=1 | live perks=6/6
+- 055 | Autos | Perpetualis | hashes=1 | live perks=6/6
+- 056 | Autos | Ammit AR2 | hashes=1 | live perks=8/8
+- 057 | Autos | Sweet Sorrow | hashes=1 | live perks=6/6
+- 058 | Autos | The Last Breath | hashes=1 | live perks=7/7
+- 059 | Autos | Lodbrok-C | hashes=1 | live perks=7/7
+- 060 | Autos | Firefright | hashes=1 | live perks=6/6
+- 061 | Autos | The Number | hashes=1 | live perks=6/6
+- 062 | Bows | Biting Winds | hashes=1 | live perks=5/5
+- 063 | Bows | The Spiteful Fang | hashes=2 | live perks=6/6
+- 064 | Bows | Point of the Stag | hashes=1 | live perks=5/5
+- 065 | Bows | Non-Denouement | hashes=1 | live perks=8/8
+- 066 | Bows | Accrued Redemption | hashes=1 | live perks=5/5
+- 067 | Bows | Fortunate Star | hashes=2 | live perks=8/8
+- 068 | Bows | Anamnesis | hashes=2 | live perks=7/7
+- 069 | Bows | Hush | hashes=1 | live perks=7/7
+- 070 | Bows | Pre Astyanax IV | hashes=1 | live perks=5/5
+- 071 | Bows | Tyranny of Heaven | hashes=1 | live perks=6/6
+- 072 | Bows | Vengeful Whisper | hashes=1 | live perks=8/8
+- 073 | Bows | Convened Recurve | hashes=2 | live perks=7/7
+- 074 | Bows | King Orfeo | hashes=5 | live perks=6/6
+- 075 | Bows | Hushed Whisper | hashes=2 | live perks=6/6
+- 076 | Bows | Mercury-A | hashes=1 | live perks=5/5
+- 077 | Bows | Lethophobia | hashes=1 | live perks=5/5
+- 078 | Bows | Tripwire Canary | hashes=1 | live perks=4/4
+- 079 | Bows | Arsenic Bite-4B | hashes=1 | live perks=4/4
+- 080 | Bows | Raconteur | hashes=1 | live perks=6/6
+- 081 | Bows | Strident Whistle | hashes=1 | live perks=5/5
+- 082 | Bows | Under Your Skin | hashes=1 | live perks=5/5
+- 083 | Bows | Fel Taradiddle | hashes=1 | live perks=5/5
+- 084 | Bows | Wolftone Draw | hashes=1 | live perks=5/5
+- 085 | Bows | Lunulata-4B | hashes=1 | live perks=4/4
+- 086 | Bows | Neoptolemus II | hashes=1 | live perks=4/4
+- 087 | Bows | Whispering Slab | hashes=1 | live perks=5/5
+- 088 | Bows | Imperial Needle | hashes=1 | live perks=4/4
+- 089 | Bows | Whistler's Whim | hashes=2 | live perks=7/7
+- 090 | HCs | Kindled Orchid | hashes=2 | live perks=8/8
+- 091 | HCs | IRONWOOD 03 | hashes=1 | live perks=8/8
+- 092 | HCs | Word of Crota | hashes=1 | live perks=7/7
+- 093 | HCs | Exalted Truth | hashes=2 | live perks=5/5
+- 094 | HCs | Modified B-7 Pistol | hashes=2 | live perks=5/5
+- 095 | HCs | Zaouli's Bane — Pantheon version | hashes=2 | live perks=8/8
+- 096 | HCs | Zaouli's Bane | hashes=1 | live perks=7/7
+- 097 | HCs | Epochal Integration | hashes=1 | live perks=7/7
+- 098 | HCs | Eyasluna | hashes=1 | live perks=8/8
+- 099 | HCs | Corundum Hammer | hashes=1 | live perks=7/7
+- 100 | HCs | Vulpecula | hashes=1 | live perks=6/6
+- 101 | HCs | Service Revolver | hashes=2 | live perks=6/6
+- 102 | HCs | Unloved | hashes=2 | live perks=7/7
+- 103 | HCs | Nation of Beasts | hashes=1 | live perks=7/7
+- 104 | HCs | Solemn Remembrance | hashes=1 | live perks=4/4
+- 105 | HCs | Luna's Howl | hashes=1 | live perks=7/7
+- 106 | HCs | Fatebringer | hashes=2 | live perks=7/7
+- 107 | HCs | Midnight Coup | hashes=1 | live perks=8/8
+- 108 | HCs | Triple Laureate | hashes=2 | live perks=5/5
+- 109 | HCs | Trust | hashes=1 | live perks=5/5
+- 110 | HCs | Posterity | hashes=1 | live perks=5/5
+- 111 | HCs | Aureus Neutralizer | hashes=1 | live perks=7/7
+- 112 | HCs | Maahes HC4 | hashes=2 | live perks=6/6
+- 113 | HCs | Seventh Seraph Officer Revolver | hashes=1 | live perks=5/5
+- 114 | HCs | Bold Endings | hashes=1 | live perks=5/5
+- 115 | HCs | Agape | hashes=1 | live perks=7/7
+- 116 | HCs | Ancient Gospel | hashes=1 | live perks=6/6
+- 117 | HCs | Sarpedon-D | hashes=2 | live perks=7/7
+- 118 | HCs | Phoneutria Fera | hashes=5 | live perks=7/7
+- 119 | HCs | Sightline Survey | hashes=1 | live perks=5/5
+- 120 | HCs | Spare Rations | hashes=1 | live perks=5/5
+- 121 | HCs | D.F.A. | hashes=2 | live perks=4/4
+- 122 | HCs | Loud Lullaby | hashes=1 | live perks=7/7
+- 123 | HCs | Rose | hashes=1 | live perks=4/4
+- 124 | HCs | Igneous Hammer | hashes=1 | live perks=6/6
+- 125 | HCs | Mos Athanor IV | hashes=2 | live perks=5/5
+- 126 | HCs | Optative | hashes=1 | live perks=4/4
+- 127 | HCs | IKELOS_HC_V1.0.3 | hashes=1 | live perks=4/4
+- 128 | HCs | Yesterday's Question | hashes=2 | live perks=5/5
+- 129 | HCs | Malediction | hashes=1 | live perks=6/6
+- 130 | HCs | Round Robin | hashes=1 | live perks=5/5
+- 131 | HCs | Judgment — RotN version | hashes=1 | live perks=5/5
+- 132 | HCs | Judgment | hashes=1 | live perks=6/6
+- 133 | HCs | Finite Impactor | hashes=1 | live perks=5/5
+- 134 | HCs | Better Devils | hashes=3 | live perks=5/5
+- 135 | HCs | Sixth Sense | hashes=5 | live perks=6/6
+- 136 | HCs | Crimil's Dagger | hashes=1 | live perks=4/4
+- 137 | HCs | Exuviae | hashes=1 | live perks=4/4
+- 138 | HCs | The Palindrome | hashes=2 | live perks=4/4
+- 139 | HCs | Something New | hashes=2 | live perks=6/6
+- 140 | HCs | True Prophecy | hashes=1 | live perks=5/5
+- 141 | HCs | Targeted Redaction | hashes=1 | live perks=4/4
+- 142 | HCs | Waking Vigil | hashes=1 | live perks=7/7
+- 143 | HCs | Survivor's Epitaph | hashes=2 | live perks=4/4
+- 144 | HCs | Warden's Law | hashes=2 | live perks=5/5
+- 145 | HCs | Cantata-57 | hashes=1 | live perks=4/4
+- 146 | HCs | Solemn Lie | hashes=1 | live perks=5/5
+- 147 | HCs | Annual Skate | hashes=1 | live perks=5/5
+- 148 | HCs | Combined Action | hashes=1 | live perks=5/5
+- 149 | HCs | Bottom Dollar | hashes=2 | live perks=4/4
+- 150 | HCs | Kept Confidence | hashes=1 | live perks=4/4
+- 151 | HCs | Crisis Inverted | hashes=1 | live perks=9/9
+- 152 | HCs | Pure Poetry | hashes=1 | live perks=7/7
+- 153 | HCs | Austringer | hashes=2 | live perks=5/5
+- 154 | HCs | Frontier's Cry | hashes=2 | live perks=4/4
+- 155 | HCs | Dire Promise | hashes=1 | live perks=6/6
+- 156 | HCs | Nature of the Beast | hashes=2 | live perks=4/4
+- 157 | HCs | The Steady Hand | hashes=1 | live perks=6/6
+- 158 | Pulses | Joxer's Longsword | hashes=2 | live perks=9/9
+- 159 | Pulses | Claws of the Wolf | hashes=2 | live perks=8/8
+- 160 | Pulses | The Martlet | hashes=1 | live perks=8/8
+- 161 | Pulses | Gridskipper | hashes=1 | live perks=8/8
+- 162 | Pulses | Nullify | hashes=1 | live perks=8/8
+- 163 | Pulses | Veles-X | hashes=1 | live perks=9/9
+- 164 | Pulses | High Tyrant | hashes=1 | live perks=8/8
+- 165 | Pulses | Elsie's Rifle | hashes=1 | live perks=9/9
+- 166 | Pulses | Premonition | hashes=1 | live perks=10/10
+- 167 | Pulses | The Time-Worn Spire | hashes=1 | live perks=7/7
+- 168 | Pulses | All or Nothing | hashes=2 | live perks=7/7
+- 169 | Pulses | Chattering Bone — Pantheon version | hashes=2 | live perks=9/9
+- 170 | Pulses | Redrix's Estoc | hashes=1 | live perks=6/6
+- 171 | Pulses | Hailing Confusion | hashes=1 | live perks=8/8
+- 172 | Pulses | New Purpose | hashes=1 | live perks=7/7
+- 173 | Pulses | Blast Furnace | hashes=2 | live perks=8/8
+- 174 | Pulses | The Messenger | hashes=1 | live perks=9/9
+- 175 | Pulses | Oversoul Edict | hashes=1 | live perks=8/8
+- 176 | Pulses | Adhortative | hashes=1 | live perks=7/7
+- 177 | Pulses | Jurassic Green | hashes=2 | live perks=5/5
+- 178 | Pulses | Darkest Before | hashes=1 | live perks=7/7
+- 179 | Pulses | Chattering Bone | hashes=1 | live perks=7/7
+- 180 | Pulses | Battle Scar | hashes=1 | live perks=6/6
+- 181 | Pulses | Stars in Shadow | hashes=1 | live perks=6/6
+- 182 | Pulses | Infinite Paths 8 | hashes=1 | live perks=5/5
+- 183 | Pulses | Relentless — RotN version | hashes=1 | live perks=8/8
+- 184 | Pulses | Belisarius-D | hashes=1 | live perks=9/9
+- 185 | Pulses | Relentless | hashes=2 | live perks=8/8
+- 186 | Pulses | Insidious | hashes=1 | live perks=8/8
+- 187 | Pulses | Bygones | hashes=1 | live perks=8/8
+- 188 | Pulses | Smite of Merain | hashes=1 | live perks=6/6
+- 189 | Pulses | Sacred Provenance | hashes=1 | live perks=7/7
+- 190 | Pulses | Corrasion | hashes=1 | live perks=5/5
+- 191 | Pulses | Vantage Point | hashes=1 | live perks=5/5
+- 192 | Pulses | Horror's Least | hashes=2 | live perks=5/5
+- 193 | Pulses | Phyllotactic Spiral | hashes=1 | live perks=7/7
+- 194 | Pulses | Nightshade | hashes=2 | live perks=6/6
+- 195 | Pulses | Jorum's Claw | hashes=2 | live perks=6/6
+- 196 | Pulses | Aisha's Care | hashes=2 | live perks=5/5
+- 197 | Pulses | BxR-55 Battler | hashes=1 | live perks=5/5
+- 198 | Pulses | Stay Frosty | hashes=2 | live perks=5/5
+- 199 | Pulses | Cruel Mercy | hashes=2 | live perks=5/5
+- 200 | Pulses | Psi Hermetic V | hashes=1 | live perks=5/5
+- 201 | Pulses | Disparity | hashes=1 | live perks=6/6
+- 202 | Pulses | Syncopation-53 | hashes=1 | live perks=7/7
+- 203 | Pulses | Last Thursday | hashes=1 | live perks=7/7
+- 204 | Pulses | Different Times | hashes=1 | live perks=6/6
+- 205 | Pulses | Yesteryear | hashes=2 | live perks=8/8
+- 206 | Pulses | Piece of Mind | hashes=1 | live perks=8/8
+- 207 | Pulses | Ogma PR6 | hashes=2 | live perks=7/7
+- 208 | Pulses | Outlast | hashes=1 | live perks=6/6
+- 209 | Pulses | Autumn Wind | hashes=3 | live perks=6/6
+- 210 | Pulses | Forge's Pledge | hashes=1 | live perks=7/7
+- 211 | Pulses | The Third Axiom | hashes=2 | live perks=9/9
+- 212 | Pulses | Scalar Potential | hashes=1 | live perks=7/7
+- 213 | Pulses | Cold Denial | hashes=2 | live perks=7/7
+- 214 | Pulses | Jian 7 Rifle | hashes=1 | live perks=6/6
+- 215 | Pulses | Last Perdition | hashes=1 | live perks=5/5
+- 216 | Pulses | Legal Action II | hashes=1 | live perks=6/6
+- 217 | Scouts | Vouchsafe | hashes=1 | live perks=8/8
+- 218 | Scouts | Voltaic Shade | hashes=1 | live perks=6/6
+- 219 | Scouts | Unworthy | hashes=1 | live perks=6/6
+- 220 | Scouts | Trustee | hashes=1 | live perks=7/7
+- 221 | Scouts | Doom of Chelchis | hashes=1 | live perks=8/8
+- 222 | Scouts | Pointed Inquiry | hashes=1 | live perks=7/7
+- 223 | Scouts | No Feelings | hashes=2 | live perks=7/7
+- 224 | Scouts | Fang of Ir Yût | hashes=1 | live perks=8/8
+- 225 | Scouts | Hung Jury SR4 | hashes=1 | live perks=7/7
+- 226 | Scouts | The Scholar | hashes=1 | live perks=8/8
+- 227 | Scouts | Vision of Confluence | hashes=2 | live perks=7/7
+- 228 | Scouts | Nature Reclaimed | hashes=1 | live perks=6/6
+- 229 | Scouts | Aisha's Embrace | hashes=1 | live perks=7/7
+- 230 | Scouts | Timeworn Wayfarer | hashes=1 | live perks=5/5
+- 231 | Scouts | Oxygen SR3 | hashes=2 | live perks=6/6
+- 232 | Scouts | Inbound Surveillance | hashes=1 | live perks=7/7
+- 233 | Scouts | Forced Memorializer | hashes=1 | live perks=7/7
+- 234 | Scouts | Randy's Throwing Knife | hashes=3 | live perks=5/5
+- 235 | Scouts | Long Arm | hashes=1 | live perks=7/7
+- 236 | Scouts | Patron of Lost Causes | hashes=2 | live perks=4/4
+- 237 | Scouts | Brya's Love | hashes=1 | live perks=6/6
+- 238 | Scouts | Sublimation | hashes=1 | live perks=7/7
+- 239 | Scouts | Tarnished Mettle | hashes=1 | live perks=6/6
+- 240 | Scouts | Nameless Midnight | hashes=2 | live perks=6/6
+- 241 | Scouts | Admetus-D | hashes=1 | live perks=5/5
+- 242 | Scouts | Transfiguration | hashes=1 | live perks=6/6
+- 243 | Scouts | The Guiding Sight | hashes=1 | live perks=4/4
+- 244 | Scouts | Imperative | hashes=1 | live perks=5/5
+- 245 | Scouts | Last Rite | hashes=1 | live perks=7/7
+- 246 | Scouts | Red Tape | hashes=2 | live perks=6/6
+- 247 | Scouts | Jurisprudent | hashes=1 | live perks=4/4
+- 248 | Scouts | Live Fire | hashes=2 | live perks=5/5
+- 249 | Scouts | Staccato-46 | hashes=1 | live perks=6/6
+- 250 | Scouts | Perses-D | hashes=1 | live perks=6/6
+- 251 | Scouts | Jararaca-3sr | hashes=1 | live perks=5/5
+- 252 | Scouts | Taraxippos | hashes=2 | live perks=6/6
+- 253 | Scouts | The Prophet | hashes=1 | live perks=5/5
+- 254 | Scouts | Glissando-47 | hashes=2 | live perks=5/5
+- 255 | Scouts | Long Arm — RotN version | hashes=1 | live perks=5/5
+- 256 | Scouts | Night Watch | hashes=2 | live perks=4/4
+- 257 | Scouts | Tears of Contrition | hashes=1 | live perks=5/5
+- 258 | Scouts | Talons of the Eagle | hashes=1 | live perks=4/4
+- 259 | Scouts | Servant Leader | hashes=1 | live perks=5/5
+- 260 | Scouts | Contingency Plan | hashes=1 | live perks=4/4
+- 261 | Scouts | Royal Chase | hashes=1 | live perks=4/4
+- 262 | Scouts | Eternal Blazon | hashes=1 | live perks=5/5
+- 263 | Scouts | Adverse Possession IX | hashes=1 | live perks=7/7
+- 264 | Scouts | Pleiades Corrector | hashes=1 | live perks=5/5
+- 265 | Sidearms | Compact Defender | hashes=2 | live perks=4/4
+- 266 | Sidearms | Brass Attacks | hashes=1 | live perks=8/8
+- 267 | Sidearms | Seventh Seraph SI-2 | hashes=1 | live perks=7/7
+- 268 | Sidearms | Evening SI4 | hashes=2 | live perks=6/6
+- 269 | Sidearms | Insurmountable | hashes=2 | live perks=8/8
+- 270 | Sidearms | Punching Out | hashes=2 | live perks=6/6
+- 271 | Sidearms | Drang | hashes=1 | live perks=5/5
+- 272 | Sidearms | Heliocentric QSc | hashes=2 | live perks=5/5
+- 273 | Sidearms | Anonymous Autumn | hashes=2 | live perks=5/5
+- 274 | Sidearms | The Keening | hashes=2 | live perks=6/6
+- 275 | Sidearms | Forgiveness | hashes=1 | live perks=6/6
+- 276 | Sidearms | Empirical Evidence | hashes=1 | live perks=5/5
+- 277 | Sidearms | Peacebond | hashes=2 | live perks=6/6
+- 278 | Sidearms | Division | hashes=2 | live perks=4/4
+- 279 | Sidearms | Brigand's Law | hashes=1 | live perks=6/6
+- 280 | Sidearms | Fimbulwinter Stitch | hashes=2 | live perks=7/7
+- 281 | Sidearms | Drang (Baroque) | hashes=1 | live perks=4/4
+- 282 | Sidearms | Liminal Vigil — RotN version | hashes=1 | live perks=8/8
+- 283 | Sidearms | Liminal Vigil | hashes=1 | live perks=8/8
+- 284 | Sidearms | Mykel's Reverence | hashes=1 | live perks=7/7
+- 285 | Sidearms | Breachlight | hashes=1 | live perks=5/5
+- 286 | Sidearms | Buzzard | hashes=2 | live perks=6/6
+- 287 | Sidearms | Faustus Decline | hashes=1 | live perks=5/5
+- 288 | Sidearms | Fioritura-59 | hashes=1 | live perks=5/5
+- 289 | Sidearms | Senuna SI6 | hashes=1 | live perks=6/6
+- 290 | Sidearms | Boudica-C | hashes=1 | live perks=7/7
+- 291 | Sidearms | Allied Demand | hashes=3 | live perks=7/7
+- 292 | Sidearms | Controlling Vision | hashes=1 | live perks=6/6
+- 293 | Sidearms | The Last Dance | hashes=1 | live perks=7/7
+- 294 | Sidearms | The Vision | hashes=1 | live perks=6/6
+- 295 | Sidearms | The Fool's Remedy | hashes=1 | live perks=5/5
+- 296 | Sidearms | Redback-5SI | hashes=1 | live perks=5/5
+- 297 | Sidearms | Spoiler Alert | hashes=1 | live perks=7/7
+- 298 | Sidearms | A Swift Verdict | hashes=1 | live perks=6/6
+- 299 | Sidearms | Lonesome | hashes=2 | live perks=6/6
+- 300 | Sidearms | Enigma's Draw | hashes=1 | live perks=5/5
+- 301 | Sidearms | Farewell | hashes=1 | live perks=6/6
+- 302 | Sidearms | High Albedo | hashes=1 | live perks=5/5
+- 303 | SMGs | Unforgiven | hashes=1 | live perks=9/9
+- 304 | SMGs | Multimach CCX | hashes=1 | live perks=6/6
+- 305 | SMGs | The Recluse | hashes=1 | live perks=7/7
+- 306 | SMGs | Bug-Out Bag | hashes=1 | live perks=8/8
+- 307 | SMGs | M-17 "Fast Talker" | hashes=2 | live perks=5/5
+- 308 | SMGs | Yeartide Apex | hashes=2 | live perks=8/8
+- 309 | SMGs | MIDA Mini-Tool | hashes=1 | live perks=8/8
+- 310 | SMGs | Submission | hashes=1 | live perks=4/4
+- 311 | SMGs | Vikala SMG4 | hashes=2 | live perks=7/7
+- 312 | SMGs | The Title | hashes=3 | live perks=7/7
+- 313 | SMGs | Every Waking Moment | hashes=1 | live perks=9/9
+- 314 | SMGs | No Survivors | hashes=1 | live perks=8/8
+- 315 | SMGs | Parabellum | hashes=1 | live perks=7/7
+- 316 | SMGs | Imminence | hashes=1 | live perks=8/8
+- 317 | SMGs | Shayura's Wrath | hashes=1 | live perks=7/7
+- 318 | SMGs | Synchronic Roulette | hashes=1 | live perks=7/7
+- 319 | SMGs | Peculiar Charm | hashes=1 | live perks=8/8
+- 320 | SMGs | No Survivors — RotN version | hashes=1 | live perks=7/7
+- 321 | SMGs | Adjudicator | hashes=1 | live perks=5/5
+- 322 | SMGs | Noxious Vetiver | hashes=1 | live perks=5/5
+- 323 | SMGs | Out of Bounds | hashes=2 | live perks=6/6
+- 324 | SMGs | Gunburn | hashes=2 | live perks=7/7
+- 325 | SMGs | Forensic Nightmare | hashes=1 | live perks=7/7
+- 326 | SMGs | Unending Tempest | hashes=2 | live perks=7/7
+- 327 | SMGs | Perfect Pitch | hashes=1 | live perks=6/6
+- 328 | SMGs | DEADHORSE 04 | hashes=1 | live perks=6/6
+- 329 | SMGs | Seraphine Haze | hashes=1 | live perks=4/4
+- 330 | SMGs | Antedate | hashes=1 | live perks=8/8
+- 331 | SMGs | The Hero's Burden | hashes=2 | live perks=6/6
+- 332 | SMGs | Whatchamacallit | hashes=2 | live perks=7/7
+- 333 | SMGs | The Showrunner | hashes=1 | live perks=6/6
+- 334 | SMGs | Death Adder | hashes=1 | live perks=4/4
+- 335 | SMGs | Subjunctive | hashes=1 | live perks=6/6
+- 336 | SMGs | IKELOS_SMG_V1.0.3 | hashes=1 | live perks=6/6
+- 337 | SMGs | Seventh Seraph VY-7 | hashes=1 | live perks=6/6
+- 338 | SMGs | The Immortal | hashes=1 | live perks=7/7
+- 339 | SMGs | CALUS Mini-Tool | hashes=1 | live perks=6/6
+- 340 | SMGs | Qua Nilus II | hashes=1 | live perks=6/6
+- 341 | SMGs | Mirror Imago | hashes=2 | live perks=5/5
+- 342 | SMGs | Prolonged Engagement | hashes=2 | live perks=6/6
+- 343 | SMGs | Yarovit MG4 | hashes=1 | live perks=8/8
+- 344 | SMGs | Blood Feud | hashes=1 | live perks=5/5
+- 345 | SMGs | Rapacious Appetite | hashes=1 | live perks=7/7
+- 346 | SMGs | Cold Front | hashes=1 | live perks=6/6
+- 347 | SMGs | Borrowed Time | hashes=1 | live perks=8/8
+- 348 | SMGs | Funnelweb | hashes=1 | live perks=6/6
+- 349 | SMGs | Escape Velocity | hashes=1 | live perks=5/5
+- 350 | SMGs | Friction Fire | hashes=1 | live perks=7/7
+- 351 | SMGs | Boondoggle Mk. 55 | hashes=1 | live perks=5/5
+- 352 | SMGs | Stochastic Variable | hashes=1 | live perks=7/7
+- 353 | SMGs | Extraordinary Rendition | hashes=1 | live perks=6/6
+- 354 | SMGs | Enyo-D | hashes=1 | live perks=6/6
+- 355 | SMGs | Pizzicato-22 | hashes=1 | live perks=7/7
+- 356 | BGLs | VS Velocity Baton | hashes=1 | live perks=8/8
+- 357 | BGLs | Ouster Engine | hashes=2 | live perks=8/8
+- 358 | BGLs | Gizmo Weft | hashes=2 | live perks=10/10
+- 359 | BGLs | Psychopomp | hashes=1 | live perks=8/8
+- 360 | BGLs | Festival Flight | hashes=2 | live perks=8/8
+- 361 | BGLs | Theodolite | hashes=1 | live perks=6/6
+- 362 | BGLs | Lost Signal | hashes=1 | live perks=8/8
+- 363 | BGLs | Motif-41 | hashes=1 | live perks=6/6
+- 364 | BGLs | New Pacific Epitaph | hashes=1 | live perks=8/8
+- 365 | BGLs | Forbearance — BRAVE version | hashes=1 | live perks=8/8
+- 366 | BGLs | Wilderflight | hashes=1 | live perks=7/7
+- 367 | BGLs | Permafrost | hashes=2 | live perks=7/7
+- 368 | BGLs | Wilderflight — RotN version | hashes=2 | live perks=8/8
+- 369 | BGLs | Liturgy | hashes=2 | live perks=5/5
+- 370 | BGLs | Romantic Death | hashes=5 | live perks=5/5
+- 371 | BGLs | Forbearance | hashes=1 | live perks=7/7
+- 372 | BGLs | New Pacific Epitaph — RotN version | hashes=2 | live perks=7/7
+- 373 | BGLs | Salvager's Salvo | hashes=2 | live perks=7/7
+- 374 | BGLs | Harsh Language | hashes=1 | live perks=6/6
+- 375 | BGLs | Martyr's Retribution | hashes=1 | live perks=7/7
+- 376 | BGLs | Lingering Dread | hashes=1 | live perks=7/7
+- 377 | BGLs | Tusk of the Boar | hashes=2 | live perks=5/5
+- 378 | BGLs | Explosive Personality | hashes=1 | live perks=6/6
+- 379 | BGLs | The Mountaintop — BRAVE version | hashes=3 | live perks=9/9
+- 380 | BGLs | The Militia's Birthright | hashes=2 | live perks=5/5
+- 381 | BGLs | Undercurrent | hashes=2 | live perks=7/7
+- 382 | BGLs | Wild Style | hashes=2 | live perks=6/6
+- 383 | BGLs | Ignition Code | hashes=2 | live perks=5/5
+- 384 | BGLs | Pardon Our Dust | hashes=1 | live perks=4/4
+- 385 | BGLs | Orewing's Maul | hashes=1 | live perks=4/4
+- 386 | BGLs | Empty Vessel | hashes=2 | live perks=4/4
+- 387 | BGLs | Deafening Whisper | hashes=1 | live perks=5/5
+- 388 | BGLs | Prodigal Return | hashes=1 | live perks=4/4
+- 389 | BGLs | Truthteller | hashes=1 | live perks=4/4
+- 390 | Fusions | The Wizened Rebuke | hashes=1 | live perks=7/7
+- 391 | Fusions | Glacioclasm | hashes=1 | live perks=6/6
+- 392 | Fusions | Loaded Question | hashes=2 | live perks=8/8
+- 393 | Fusions | Accelerando-42 | hashes=2 | live perks=8/8
+- 394 | Fusions | The Eremite | hashes=1 | live perks=6/6
+- 395 | Fusions | Techeun Force | hashes=1 | live perks=8/8
+- 396 | Fusions | Cartesian Coordinate | hashes=1 | live perks=9/9
+- 397 | Fusions | Nox Perennial V | hashes=2 | live perks=5/5
+- 398 | Fusions | Monody-44 | hashes=1 | live perks=6/6
+- 399 | Fusions | Midha's Reckoning | hashes=1 | live perks=7/7
+- 400 | Fusions | PLUG ONE.1 | hashes=2 | live perks=6/6
+- 401 | Fusions | Axial Lacuna | hashes=1 | live perks=6/6
+- 402 | Fusions | Main Ingredient | hashes=2 | live perks=6/6
+- 403 | Fusions | Burden of Guilt | hashes=1 | live perks=7/7
+- 404 | Fusions | Deliverance | hashes=1 | live perks=7/7
+- 405 | Fusions | Null Composure | hashes=2 | live perks=8/8
+- 406 | Fusions | Riptide | hashes=2 | live perks=7/7
+- 407 | Fusions | Dream Breaker | hashes=1 | live perks=7/7
+- 408 | Fusions | Lionfish-4fr | hashes=1 | live perks=8/8
+- 409 | Fusions | The Beacon | hashes=2 | live perks=8/8
+- 410 | Fusions | Tempered Dynamo | hashes=2 | live perks=8/8
+- 411 | Fusions | Aurvandil FR6 | hashes=2 | live perks=5/5
+- 412 | Fusions | VS Gravitic Arrest | hashes=1 | live perks=7/7
+- 413 | Fusions | Zealot's Reward | hashes=1 | live perks=7/7
+- 414 | Fusions | TAHOMA 01 | hashes=1 | live perks=8/8
+- 415 | Fusions | Scatter Signal | hashes=1 | live perks=6/6
+- 416 | Fusions | Iterative Loop | hashes=1 | live perks=6/6
+- 417 | Fusions | Afterlight | hashes=2 | live perks=5/5
+- 418 | Fusions | Finite Maybe | hashes=1 | live perks=9/9
+- 419 | Fusions | Pressurized Precision | hashes=2 | live perks=7/7
+- 420 | Fusions | Royal Executioner | hashes=1 | live perks=6/6
+- 421 | Fusions | Resounding | hashes=1 | live perks=6/6
+- 422 | Fusions | Nox Sidereal IV | hashes=2 | live perks=7/7
+- 423 | Fusions | Cruoris FR4 | hashes=1 | live perks=6/6
+- 424 | Fusions | Iota Draconis | hashes=1 | live perks=5/5
+- 425 | Fusions | Exile's Curse | hashes=1 | live perks=6/6
+- 426 | Fusions | Likely Suspect | hashes=1 | live perks=5/5
+- 427 | Fusions | Coriolis Force | hashes=1 | live perks=5/5
+- 428 | Fusions | Snorri FR5 | hashes=1 | live perks=7/7
+- 429 | Fusions | Hollow Words | hashes=1 | live perks=6/6
+- 430 | Fusions | Trinary System | hashes=1 | live perks=6/6
+- 431 | Fusions | Timelines' Vertex | hashes=1 | live perks=5/5
+- 432 | Fusions | The Epicurean | hashes=1 | live perks=5/5
+- 433 | Glaives | Ecliptic Distaff | hashes=1 | live perks=9/9
+- 434 | Glaives | The Heron | hashes=5 | live perks=9/9
+- 435 | Glaives | Forthcoming Deviance | hashes=1 | live perks=9/9
+- 436 | Glaives | Refusal of the Call | hashes=1 | live perks=8/8
+- 437 | Glaives | Rake Angle | hashes=2 | live perks=8/8
+- 438 | Glaives | Lubrae's Ruin | hashes=1 | live perks=9/9
+- 439 | Glaives | Nezarec's Whisper | hashes=1 | live perks=8/8
+- 440 | Glaives | Judgment of Kelgorath | hashes=1 | live perks=9/9
+- 441 | Glaives | The Enigma | hashes=1 | live perks=7/7
+- 442 | Glaives | Greasy Luck | hashes=1 | live perks=9/9
+- 443 | Glaives | Greasy Luck — RotN version | hashes=1 | live perks=9/9
+- 444 | Glaives | Albedo Wing | hashes=2 | live perks=9/9
+- 445 | Glaives | Backfang | hashes=2 | live perks=9/9
+- 446 | Glaives | Unexpected Resurgence | hashes=1 | live perks=8/8
+- 447 | Shotguns | Threat Level | hashes=2 | live perks=8/8
+- 448 | Shotguns | Found Verdict | hashes=2 | live perks=8/8
+- 449 | Shotguns | Perfect Paradox | hashes=1 | live perks=8/8
+- 450 | Shotguns | Heritage | hashes=1 | live perks=7/7
+- 451 | Shotguns | Basso Ostinato | hashes=1 | live perks=7/7
+- 452 | Shotguns | Unvoiced | hashes=2 | live perks=6/6
+- 453 | Shotguns | Felwinter's Lie | hashes=1 | live perks=7/7
+- 454 | Shotguns | IKELOS_SG_v1.0.3 | hashes=1 | live perks=6/6
+- 455 | Shotguns | The Deicide | hashes=1 | live perks=8/8
+- 456 | Shotguns | One Small Step | hashes=1 | live perks=6/6
+- 457 | Shotguns | A Sudden Death — RotN version | hashes=1 | live perks=6/6
+- 458 | Shotguns | A Sudden Death | hashes=1 | live perks=6/6
+- 459 | Shotguns | Imperial Decree | hashes=1 | live perks=5/5
+- 460 | Shotguns | Pure Recollection | hashes=1 | live perks=7/7
+- 461 | Shotguns | Arcane Embrace | hashes=2 | live perks=7/7
+- 462 | Shotguns | Until Its Return | hashes=1 | live perks=7/7
+- 463 | Shotguns | Starscape Null | hashes=1 | live perks=8/8
+- 464 | Shotguns | Swordbreaker | hashes=1 | live perks=7/7
+- 465 | Shotguns | Xenoclast IV | hashes=2 | live perks=7/7
+- 466 | Shotguns | Last Man Standing | hashes=1 | live perks=7/7
+- 467 | Shotguns | Fractethyst | hashes=1 | live perks=5/5
+- 468 | Shotguns | MIDA Macro-Tool | hashes=1 | live perks=6/6
+- 469 | Shotguns | Compass Rose | hashes=2 | live perks=5/5
+- 470 | Shotguns | Astral Horizon | hashes=1 | live perks=7/7
+- 471 | Shotguns | Trachinus | hashes=5 | live perks=6/6
+- 472 | Shotguns | Gunnora's Axe | hashes=1 | live perks=8/8
+- 473 | Shotguns | Prophet of Doom | hashes=1 | live perks=7/7
+- 474 | Shotguns | Seventh Seraph CQC-12 | hashes=1 | live perks=6/6
+- 475 | Shotguns | Ded Gramarye IV | hashes=2 | live perks=7/7
+- 476 | Shotguns | Dead Weight | hashes=1 | live perks=8/8
+- 477 | Shotguns | Python | hashes=1 | live perks=6/6
+- 478 | Shotguns | Someday | hashes=1 | live perks=6/6
+- 479 | Shotguns | Matador 64 | hashes=1 | live perks=6/6
+- 480 | Shotguns | Deadpan Delivery | hashes=1 | live perks=7/7
+- 481 | Shotguns | Sojourner's Tale | hashes=1 | live perks=7/7
+- 482 | Shotguns | Precipial | hashes=1 | live perks=6/6
+- 483 | Shotguns | Reckless Endangerment | hashes=1 | live perks=5/5
+- 484 | Shotguns | Hawthorne's Field-Forged Shotgun | hashes=1 | live perks=5/5
+- 485 | Shotguns | Scavenger's Fate | hashes=1 | live perks=6/6
+- 486 | Shotguns | Blasphemer | hashes=1 | live perks=4/4
+- 487 | Shotguns | Fortissimo-11 | hashes=2 | live perks=6/6
+- 488 | Shotguns | Nessa's Oblation | hashes=1 | live perks=5/5
+- 489 | Shotguns | Supercluster | hashes=1 | live perks=8/8
+- 490 | Shotguns | Without Remorse | hashes=1 | live perks=5/5
+- 491 | Shotguns | Retold Tale | hashes=1 | live perks=5/5
+- 492 | Shotguns | Wastelander M5 | hashes=1 | live perks=6/6
+- 493 | Shotguns | Retrofuturist | hashes=2 | live perks=6/6
+- 494 | Shotguns | Ragnhild-D | hashes=1 | live perks=4/4
+- 495 | Shotguns | Hand in Hand | hashes=1 | live perks=6/6
+- 496 | Shotguns | The Comedian | hashes=1 | live perks=5/5
+- 497 | Shotguns | Mindbender's Ambition | hashes=2 | live perks=5/5
+- 498 | Shotguns | Deadlock | hashes=1 | live perks=5/5
+- 499 | Shotguns | No Reprieve | hashes=1 | live perks=5/5
+- 500 | Shotguns | Legato-11 | hashes=1 | live perks=6/6
+- 501 | Shotguns | First In, Last Out | hashes=1 | live perks=5/5
+- 502 | Shotguns | Bonechiller | hashes=1 | live perks=6/6
+- 503 | Shotguns | The Inquisitor | hashes=1 | live perks=5/5
+- 504 | Shotguns | Riiswalker | hashes=3 | live perks=5/5
+- 505 | Shotguns | Toil and Trouble | hashes=1 | live perks=4/4
+- 506 | Shotguns | Wishbringer | hashes=1 | live perks=4/4
+- 507 | Snipers | Conspiracy Honed | hashes=1 | live perks=6/6
+- 508 | Snipers | Something Something | hashes=2 | live perks=7/7
+- 509 | Snipers | Praedyth's Revenge | hashes=2 | live perks=8/8
+- 510 | Snipers | The Helmsman | hashes=2 | live perks=8/8
+- 511 | Snipers | Lance Ephemeral | hashes=1 | live perks=7/7
+- 512 | Snipers | Omniscient Eye | hashes=1 | live perks=6/6
+- 513 | Snipers | Rapid Growth | hashes=2 | live perks=5/5
+- 514 | Snipers | Adored | hashes=2 | live perks=4/4
+- 515 | Snipers | Father's Sins | hashes=1 | live perks=8/8
+- 516 | Snipers | Critical Anomaly | hashes=1 | live perks=6/6
+- 517 | Snipers | Apostate | hashes=1 | live perks=7/7
+- 518 | Snipers | Succession | hashes=1 | live perks=7/7
+- 519 | Snipers | Last Foray | hashes=1 | live perks=7/7
+- 520 | Snipers | Succession — BRAVE version | hashes=1 | live perks=8/8
+- 521 | Snipers | Tatara Gaze | hashes=2 | live perks=7/7
+- 522 | Snipers | Volta Bracket | hashes=1 | live perks=8/8
+- 523 | Snipers | The Supremacy | hashes=1 | live perks=5/5
+- 524 | Snipers | Trophy Hunter | hashes=1 | live perks=8/8
+- 525 | Snipers | Embraced Identity | hashes=1 | live perks=8/8
+- 526 | Snipers | Alone as a god | hashes=2 | live perks=6/6
+- 527 | Snipers | Naeem's Lance | hashes=1 | live perks=8/8
+- 528 | Snipers | 1000 Yard Stare | hashes=1 | live perks=6/6
+- 529 | Snipers | Locus Locutus | hashes=1 | live perks=7/7
+- 530 | Snipers | Luna Regolith III | hashes=1 | live perks=7/7
+- 531 | Snipers | Tranquility | hashes=1 | live perks=7/7
+- 532 | Snipers | Defiance of Yasmin | hashes=1 | live perks=7/7
+- 533 | Snipers | Irukandji | hashes=1 | live perks=7/7
+- 534 | Snipers | Eye of Sol | hashes=1 | live perks=5/5
+- 535 | Snipers | IKELOS_SR_v1.0.3 | hashes=1 | live perks=4/4
+- 536 | Snipers | ALLEN 05 | hashes=1 | live perks=7/7
+- 537 | Snipers | Uzume RR4 | hashes=3 | live perks=8/8
+- 538 | Snipers | Veleda-F | hashes=1 | live perks=6/6
+- 539 | Snipers | Sovereignty | hashes=1 | live perks=7/7
+- 540 | Snipers | Fugue-55 | hashes=1 | live perks=6/6
+- 541 | Snipers | Keen Thistle | hashes=1 | live perks=8/8
+- 542 | Snipers | Shoreline Dissident | hashes=1 | live perks=7/7
+- 543 | Snipers | Occluded Finality | hashes=1 | live perks=7/7
+- 544 | Snipers | A Distant Pull | hashes=1 | live perks=4/4
+- 545 | Snipers | Silicon Neuroma | hashes=1 | live perks=5/5
+- 546 | Snipers | Albruna-D | hashes=1 | live perks=7/7
+- 547 | Snipers | Gallu RR3 | hashes=1 | live perks=5/5
+- 548 | Snipers | Frozen Orbit | hashes=2 | live perks=6/6
+- 549 | Snipers | Twilight Oath | hashes=1 | live perks=6/6
+- 550 | Snipers | Mechabre | hashes=2 | live perks=5/5
+- 551 | Snipers | Persuader | hashes=1 | live perks=5/5
+- 552 | Snipers | Mercurial Overreach | hashes=1 | live perks=6/6
+- 553 | Snipers | Sole Survivor | hashes=1 | live perks=6/6
+- 554 | Snipers | Thoughtless | hashes=1 | live perks=4/4
+- 555 | Snipers | Distant Tumulus | hashes=1 | live perks=4/4
+- 556 | Snipers | The Long Walk | hashes=1 | live perks=5/5
+- 557 | Snipers | Bite of the Fox | hashes=2 | live perks=4/4
+- 558 | Snipers | Shepherd's Watch | hashes=1 | live perks=4/4
+- 559 | Snipers | Far Future | hashes=1 | live perks=6/6
+- 560 | Snipers | The Domino | hashes=1 | live perks=5/5
+- 561 | Snipers | Beloved | hashes=2 | live perks=4/4
+- 562 | Snipers | Widow's Bite | hashes=1 | live perks=5/5
+- 563 | Snipers | Long Shadow | hashes=1 | live perks=4/4
+- 564 | Rocket Sidearms | Lotus-Eater | hashes=3 | live perks=8/8
+- 565 | Rocket Sidearms | High Albedo | hashes=1 | live perks=9/9
+- 566 | Rocket Sidearms | Returned Memory | hashes=1 | live perks=11/11
+- 567 | Rocket Sidearms | Indebted Kindness | hashes=1 | live perks=9/9
+- 568 | Rocket Sidearms | Aberrant Action | hashes=1 | live perks=8/8
+- 569 | Rocket Sidearms | Tinasha's Mastery | hashes=2 | live perks=9/9
+- 570 | Rocket Sidearms | The Call | hashes=1 | live perks=9/9
+- 571 | Rocket Sidearms | Unfall | hashes=1 | live perks=8/8
+- 572 | Traces | Chronophage | hashes=1 | live perks=6/6
+- 573 | Traces | Unsworn | hashes=1 | live perks=7/7
+- 574 | Traces | Hollow Denial | hashes=1 | live perks=5/5
+- 575 | Traces | Retraced Path | hashes=1 | live perks=7/7
+- 576 | Traces | Keraunios | hashes=2 | live perks=7/7
+- 577 | Traces | Acasia's Dejection | hashes=1 | live perks=8/8
+- 578 | Traces | Path of Least Resistance | hashes=1 | live perks=5/5
+- 579 | Traces | Incisor | hashes=2 | live perks=5/5
+- 580 | Traces | Action Item | hashes=5 | live perks=8/8
+- 581 | Traces | Warlord's Spear | hashes=1 | live perks=8/8
+- 582 | Traces | Appetence | hashes=1 | live perks=4/4
+- 583 | Traces | Ribbontail | hashes=5 | live perks=7/7
+- 584 | HGLs | Edge Transit — BRAVE version | hashes=1 | live perks=8/8
+- 585 | HGLs | VS Chill Inhibitor | hashes=1 | live perks=7/7
+- 586 | HGLs | The Ever-Present | hashes=1 | live perks=7/7
+- 587 | HGLs | Koraxis's Distress | hashes=1 | live perks=9/9
+- 588 | HGLs | Love and Death | hashes=1 | live perks=8/8
+- 589 | HGLs | Outrageous Fortune | hashes=1 | live perks=6/6
+- 590 | HGLs | Doomsday | hashes=1 | live perks=7/7
+- 591 | HGLs | Bitter/Sweet | hashes=1 | live perks=6/6
+- 592 | HGLs | Cataphract GL3 | hashes=1 | live perks=7/7
+- 593 | HGLs | Wicked Sister | hashes=1 | live perks=7/7
+- 594 | HGLs | Regnant | hashes=1 | live perks=7/7
+- 595 | HGLs | Canis Major | hashes=1 | live perks=9/9
+- 596 | HGLs | Dimensional Hypotrochoid | hashes=1 | live perks=8/8
+- 597 | HGLs | Tarnation | hashes=1 | live perks=9/9
+- 598 | HGLs | Hullabaloo | hashes=2 | live perks=8/8
+- 599 | HGLs | Cry Mutiny | hashes=1 | live perks=7/7
+- 600 | HGLs | Acosmic | hashes=2 | live perks=8/8
+- 601 | HGLs | Marsilion-C | hashes=1 | live perks=6/6
+- 602 | HGLs | Wendigo GL3 | hashes=3 | live perks=6/6
+- 603 | HGLs | Swarm of the Raven | hashes=1 | live perks=6/6
+- 604 | HGLs | Interference VI | hashes=1 | live perks=5/5
+- 605 | HGLs | Typhon GL5 | hashes=1 | live perks=4/4
+- 606 | HGLs | Memory Interdict | hashes=1 | live perks=6/6
+- 607 | HGLs | Crowd Pleaser | hashes=1 | live perks=6/6
+- 608 | HGLs | Blast Battue | hashes=1 | live perks=5/5
+- 609 | HGLs | Berenger's Memory | hashes=1 | live perks=4/4
+- 610 | LFRs | Eyes Unveiled | hashes=1 | live perks=7/7
+- 611 | LFRs | Cataclysmic | hashes=1 | live perks=6/6
+- 612 | LFRs | Reed's Regret | hashes=2 | live perks=5/5
+- 613 | LFRs | Taipan-4fr | hashes=1 | live perks=5/5
+- 614 | LFRs | Line in the Sand | hashes=1 | live perks=7/7
+- 615 | LFRs | Briar's Contempt | hashes=1 | live perks=6/6
+- 616 | LFRs | Stormchaser | hashes=1 | live perks=8/8
+- 617 | LFRs | Laser Painter | hashes=2 | live perks=5/5
+- 618 | LFRs | Sailspy Pitchglass | hashes=1 | live perks=4/4
+- 619 | LFRs | Scintillation | hashes=2 | live perks=6/6
+- 620 | LFRs | Suspectum-4fr | hashes=1 | live perks=6/6
+- 621 | LFRs | Mistral Lift | hashes=3 | live perks=7/7
+- 622 | LFRs | Doomed Petitioner | hashes=1 | live perks=7/7
+- 623 | LFRs | Willful Hamartia | hashes=1 | live perks=6/6
+- 624 | LFRs | Threaded Needle | hashes=1 | live perks=5/5
+- 625 | LFRs | Boomslang-4fr | hashes=1 | live perks=5/5
+- 626 | LFRs | Fire and Forget | hashes=1 | live perks=5/5
+- 627 | LFRs | Tarantula | hashes=1 | live perks=4/4
+- 628 | LFRs | Corsair's Wrath | hashes=1 | live perks=4/4
+- 629 | LMGs | Corrective Measure | hashes=2 | live perks=10/10
+- 630 | LMGs | Hammerhead | hashes=2 | live perks=11/11
+- 631 | LMGs | Song of Ir Yût | hashes=1 | live perks=10/10
+- 632 | LMGs | Qua Vinctus IV | hashes=2 | live perks=9/9
+- 633 | LMGs | Pro Memoria | hashes=1 | live perks=11/11
+- 634 | LMGs | Circular Logic | hashes=1 | live perks=10/10
+- 635 | LMGs | Bane of Sorrow | hashes=2 | live perks=10/10
+- 636 | LMGs | DIABLERETS 06 | hashes=1 | live perks=11/11
+- 637 | LMGs | Commemoration | hashes=1 | live perks=10/10
+- 638 | LMGs | Temporal Clause | hashes=1 | live perks=11/11
+- 639 | LMGs | Thermal Erosion | hashes=1 | live perks=10/10
+- 640 | LMGs | Marcato-45 | hashes=1 | live perks=9/9
+- 641 | LMGs | Chain of Command | hashes=1 | live perks=10/10
+- 642 | LMGs | Ulterior Observation | hashes=1 | live perks=10/10
+- 643 | LMGs | Qullim's Terminus | hashes=1 | live perks=9/9
+- 644 | LMGs | Terminus Horizon — RotN version | hashes=1 | live perks=10/10
+- 645 | LMGs | Dawn Far Off | hashes=2 | live perks=10/10
+- 646 | LMGs | Terminus Horizon | hashes=1 | live perks=10/10
+- 647 | LMGs | Seventh Seraph SAW | hashes=1 | live perks=9/9
+- 648 | LMGs | Unwavering Duty | hashes=1 | live perks=10/10
+- 649 | LMGs | Archon's Thunder | hashes=2 | live perks=10/10
+- 650 | LMGs | Avalanche | hashes=1 | live perks=10/10
+- 651 | LMGs | Recurrent Impact | hashes=1 | live perks=7/7
+- 652 | LMGs | Bitter End | hashes=1 | live perks=10/10
+- 653 | LMGs | Speleologist | hashes=1 | live perks=9/9
+- 654 | LMGs | A Fine Memorial | hashes=1 | live perks=11/11
+- 655 | LMGs | 21% Delirium | hashes=1 | live perks=11/11
+- 656 | LMGs | Watchful Eye | hashes=3 | live perks=11/11
+- 657 | LMGs | Qua Xaphan V | hashes=1 | live perks=9/9
+- 658 | LMGs | Shattered Cipher | hashes=1 | live perks=7/7
+- 659 | LMGs | Retrofit Escapade | hashes=1 | live perks=7/7
+- 660 | LMGs | Fixed Odds | hashes=1 | live perks=6/6
+- 661 | LMGs | Qua Furor V | hashes=1 | live perks=9/9
+- 662 | LMGs | Planck's Stride | hashes=1 | live perks=6/6
+- 663 | LMGs | Eleatic Principle | hashes=1 | live perks=7/7
+- 664 | LMGs | THE SWARM | hashes=1 | live perks=6/6
+- 665 | Rockets | Hezen Vengeance | hashes=2 | live perks=8/8
+- 666 | Rockets | Bellowing Giant | hashes=2 | live perks=8/8
+- 667 | Rockets | Apex Predator | hashes=1 | live perks=8/8
+- 668 | Rockets | The Hothead | hashes=2 | live perks=8/8
+- 669 | Rockets | Cynosure | hashes=2 | live perks=7/7
+- 670 | Rockets | The When and Where | hashes=1 | live perks=8/8
+- 671 | Rockets | Heretic | hashes=1 | live perks=7/7
+- 672 | Rockets | Red Herring | hashes=1 | live perks=6/6
+- 673 | Rockets | Cold Comfort — RotN version | hashes=1 | live perks=6/6
+- 674 | Rockets | Roar of the Bear | hashes=1 | live perks=5/5
+- 675 | Rockets | Cold Comfort | hashes=1 | live perks=7/7
+- 676 | Rockets | Crux Celeritas IV | hashes=2 | live perks=7/7
+- 677 | Rockets | Tomorrow's Answer | hashes=1 | live perks=8/8
+- 678 | Rockets | Bad Omens | hashes=1 | live perks=7/7
+- 679 | Rockets | Crux Termination IV | hashes=1 | live perks=7/7
+- 680 | Rockets | Haliaetus | hashes=1 | live perks=8/8
+- 681 | Rockets | Pyroclastic Flow | hashes=1 | live perks=8/8
+- 682 | Rockets | Sleepless | hashes=1 | live perks=7/7
+- 683 | Rockets | Folded Root | hashes=5 | live perks=5/5
+- 684 | Rockets | Heretic's Fervor | hashes=1 | live perks=7/7
+- 685 | Rockets | Micromort | hashes=5 | live perks=7/7
+- 686 | Rockets | Faith-Keeper | hashes=1 | live perks=6/6
+- 687 | Rockets | Ascendancy | hashes=1 | live perks=7/7
+- 688 | Rockets | Braytech Osprey | hashes=1 | live perks=7/7
+- 689 | Rockets | Crowning Duologue | hashes=2 | live perks=7/7
+- 690 | Rockets | Subzero Salvo | hashes=1 | live perks=8/8
+- 691 | Rockets | Semiotician | hashes=1 | live perks=5/5
+- 692 | Rockets | Hoosegow | hashes=1 | live perks=4/4
+- 693 | Rockets | Blowout | hashes=1 | live perks=6/6
+- 694 | Rockets | Code Duello | hashes=1 | live perks=4/4
+- 695 | Rockets | Bump in the Night | hashes=1 | live perks=4/4
+- 696 | Rockets | Palmyra-B | hashes=1 | live perks=5/5
+- 697 | Rockets | Royal Entry | hashes=1 | live perks=6/6
+- 698 | Rockets | Shining Sphere | hashes=1 | live perks=4/4
+- 699 | Swords | Sullen Claw | hashes=1 | live perks=8/8
+- 700 | Swords | Chivalric Fire | hashes=1 | live perks=10/10
+- 701 | Swords | Falling Guillotine — BRAVE version | hashes=1 | live perks=10/10
+- 702 | Swords | False Idols | hashes=1 | live perks=7/7
+- 703 | Swords | The Slammer | hashes=2 | live perks=7/7
+- 704 | Swords | Nasreddin | hashes=1 | live perks=10/10
+- 705 | Swords | Terciopelo-4bl | hashes=2 | live perks=8/8
+- 706 | Swords | Bequest | hashes=1 | live perks=7/7
+- 707 | Swords | Stryker's Sure-Hand | hashes=2 | live perks=10/10
+- 708 | Swords | Hardline Cut | hashes=5 | live perks=10/10
+- 709 | Swords | Zephyr | hashes=2 | live perks=10/10
+- 710 | Swords | Abide the Return | hashes=1 | live perks=9/9
+- 711 | Swords | Night Terror | hashes=1 | live perks=10/10
+- 712 | Swords | Sola's Scar | hashes=1 | live perks=10/10
+- 713 | Swords | Abyssal Edge | hashes=3 | live perks=10/10
+- 714 | Swords | Hero of Ages | hashes=1 | live perks=10/10
+- 715 | Swords | Ill Omen | hashes=1 | live perks=6/6
+- 716 | Swords | Temptation's Hook | hashes=2 | live perks=8/8
+- 717 | Swords | Eighty-Six | hashes=1 | live perks=8/8
+- 718 | Swords | Dragoncult Sickle | hashes=1 | live perks=8/8
+- 719 | Swords | Geodetic HSm | hashes=1 | live perks=4/4
+- 720 | Swords | Double-Edged Answer | hashes=1 | live perks=10/10
+- 721 | Swords | Goldtusk | hashes=1 | live perks=4/4
+- 722 | Swords | Synanceia | hashes=5 | live perks=9/9
+- 723 | Swords | The Other Half | hashes=1 | live perks=8/8
+- 724 | Swords | Summum Bonum | hashes=1 | live perks=8/8
+- 725 | Swords | Aurora Dawn | hashes=2 | live perks=5/5
+- 726 | Swords | Just In Case | hashes=1 | live perks=6/6
+- 727 | Swords | Negative Space | hashes=1 | live perks=5/5
+- 728 | Swords | Steel Sybil Z-14 | hashes=1 | live perks=4/4
+- 729 | Swords | Half-Truths | hashes=1 | live perks=4/4
+- 730 | Swords | Crown-Splitter | hashes=1 | live perks=5/5
+- 731 | Swords | Caretaker | hashes=1 | live perks=4/4
+- 732 | Swords | Honor's Edge | hashes=1 | live perks=7/7
+- 733 | Swords | Death's Razor | hashes=1 | live perks=5/5
+- 734 | Swords | Falling Guillotine | hashes=1 | live perks=5/5
+- 735 | Swords | Eternity's Edge | hashes=1 | live perks=6/6
+- 736 | Swords | Throne-Cleaver | hashes=1 | live perks=4/4
+- 737 | Swords | Quickfang | hashes=1 | live perks=4/4
+- 738 | Swords | Razor's Edge | hashes=1 | live perks=4/4
+- 739 | Swords | Thin Precipice | hashes=1 | live perks=6/6
+- 740 | Other | Refurbished A499 | hashes=2 | live perks=7/7
+- 741 | Other | Veillantif-D | hashes=2 | live perks=10/10
+- 742 | Other | Mint Retrograde | hashes=3 | live perks=10/10
+- 743 | Other | A Good Shout | hashes=2 | live perks=9/9
+- 744 | Other | Psi Aeterna IV | hashes=2 | live perks=10/10
+- 745 | Other | Submersion | hashes=2 | live perks=10/10
+- 746 | Other | Uncivil Discourse | hashes=2 | live perks=7/7
+- 747 | Other | Opaque Hourglass | hashes=1 | live perks=10/10
